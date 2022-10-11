@@ -1,6 +1,6 @@
 return require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
-	use "williamboman/nvim-lsp-installer"
+	use "williamboman/mason.nvim"
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
