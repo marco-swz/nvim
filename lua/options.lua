@@ -15,5 +15,6 @@ vim.opt.showmode = false
 vim.opt.scrolloff = 5
 vim.opt.cursorline = true
 vim.cmd[[colorscheme nightfox]]
+vim.cmd[[set spelllang=en,de]]
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 
