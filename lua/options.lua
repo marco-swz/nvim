@@ -16,5 +16,6 @@ vim.opt.scrolloff = 5
 vim.opt.cursorline = true
 vim.cmd[[colorscheme nightfox]]
 vim.cmd[[set spelllang=en,de]]
+vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 
