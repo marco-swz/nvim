@@ -6,6 +6,7 @@ require "diagnostic"
 require "treesitter"
 require "lua_line"
 require "send_to_term"
+require "completion"
 
 --require("languagetool").setup({
 --	language_server=[[/usr/share/java/languagetool/languagetool.jar]]
