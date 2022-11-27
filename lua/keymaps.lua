@@ -1,11 +1,9 @@
 local opts = { noremap = true, silent = true }
 
---local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
--- default leader key = \
+-- Define leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -54,11 +52,11 @@ keymap("x", "<A-k>", ":move '<-2<cr>gv-gv", opts)
 
 -- TERMINAL
 vim.cmd([[:tnoremap <A-[> <C-\><C-n>]])
---vim.cmd([[:tnoremap <C-w>j <C-\><C-n><C-w>j]])
---vim.cmd([[:tnoremap <C-w>h <C-\><C-n><C-w>h]])
---vim.cmd([[:tnoremap <C-w>k <C-\><C-n><C-w>k]])
---vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 vim.cmd([[:tnoremap <C-j> <C-\><C-n><C-w>j]])
 vim.cmd([[:tnoremap <C-h> <C-\><C-n><C-w>h]])
 vim.cmd([[:tnoremap <C-k> <C-\><C-n><C-w>k]])
 vim.cmd([[:tnoremap <C-l> <C-\><C-n><C-w>l]])
+
+-- VARIOUS
+-- Enable completion
+keymap("n", "<leader>c", ":COQnow -s<cr>", opts)
