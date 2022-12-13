@@ -3,7 +3,6 @@ require("mason").setup()
 
 -- Set up lspconfig.
 local lsp = require("lspconfig")
-local coq = require("coq")
 --local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- Mappings.
@@ -45,21 +44,24 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 lsp.pyright.setup{
     on_attach = on_attach,
     flags = lsp_flags,
+	capabilities = capabilities
 }
-lsp.pyright.setup(coq.lsp_ensure_capabilities{})
 
 lsp.julials.setup{
     on_attach = on_attach,
     flags = lsp_flags,
+	capabilities = capabilities
 }
-lsp.julials.setup(coq.lsp_ensure_capabilities{})
 
 lsp.sumneko_lua.setup{
 	on_attach = on_attach,
     flags = lsp_flags,
+	capabilities = capabilities,
 	settings = {
 		Lua = {
 			runtime = {
@@ -81,23 +83,22 @@ lsp.sumneko_lua.setup{
 		},
 	},
 }
-lsp.sumneko_lua.setup(coq.lsp_ensure_capabilities{})
 
 lsp.texlab.setup{
     on_attach = on_attach,
     flags = lsp_flags,
+	capabilities = capabilities
 }
-lsp.texlab.setup(coq.lsp_ensure_capabilities{})
 
 lsp.gopls.setup{
     on_attach = on_attach,
     flags = lsp_flags,
+	capabilities = capabilities
 }
-lsp.gopls.setup(coq.lsp_ensure_capabilities{})
 
 lsp.rust_analyzer.setup{
     on_attach = on_attach,
     flags = lsp_flags,
+	capabilities = capabilities
 }
-lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities{})
 
