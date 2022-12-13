@@ -9,8 +9,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 keymap("n", "<leader>n", ":Vexplore<cr>", opts)
-keymap("n", "<leader>t", "<cmd>lua require('send_to_term').send()<CR>", opts)
-keymap("x", "<leader>t", "<cmd>lua require('send_to_term').send(true)<CR>", opts)
+keymap("n", "<leader>t", "<cmd>lua require('custom_functions').send()<CR>", opts)
+keymap("x", "<leader>t", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
 -- Move around windows
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -58,5 +58,8 @@ vim.cmd([[:tnoremap <C-k> <C-\><C-n><C-w>k]])
 vim.cmd([[:tnoremap <C-l> <C-\><C-n><C-w>l]])
 
 -- VARIOUS
--- Enable completion
-keymap("n", "<leader>c", ":COQnow -s<cr>", opts)
+-- Toggle completion
+keymap("n", "<leader>c", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+
+
+

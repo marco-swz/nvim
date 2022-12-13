@@ -5,7 +5,7 @@ require "lsp"
 require "diagnostic"
 require "treesitter"
 require "lua_line"
-require "send_to_term"
+require "custom_functions"
 require "completion"
 require "fuzzy_finder"
 

@@ -19,3 +19,4 @@ vim.cmd[[set spelllang=en,de]]
 vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 
+vim.g.cmp_toggle = false

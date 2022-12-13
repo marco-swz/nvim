@@ -1,5 +1,9 @@
 local M = {}
 
+M.toggle_completion = function()
+	vim.g.cmp_toggle = not vim.g.cmp_toggle
+end
+
 local function trim(s)
   return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
 end
