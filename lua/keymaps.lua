@@ -60,6 +60,3 @@ vim.cmd([[:tnoremap <C-l> <C-\><C-n><C-w>l]])
 -- VARIOUS
 -- Toggle completion
 keymap("n", "<leader>c", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
-
-
-
