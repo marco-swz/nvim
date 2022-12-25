@@ -4,6 +4,24 @@ M.toggle_completion = function()
 	vim.g.cmp_toggle = not vim.g.cmp_toggle
 end
 
+M.toggle_spell = function()
+    if vim.g.spell_toggle then
+        vim.cmd([[:set nospell]])
+    else
+        vim.cmd([[:set spell]])
+    end
+	vim.g.spell_toggle = not vim.g.spell_toggle
+end
+
+M.toggle_grammar = function()
+    if vim.g.grammar_toggle then
+        vim.cmd([[:GrammarousReset]])
+    else
+        vim.cmd([[:GrammarousCheck]])
+    end
+	vim.g.grammar_toggle = not vim.g.grammar_toggle
+end
+
 local function trim(s)
   return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
 end

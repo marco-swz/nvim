@@ -60,3 +60,9 @@ vim.cmd([[:tnoremap <C-l> <C-\><C-n><C-w>l]])
 -- VARIOUS
 -- Toggle completion
 keymap("n", "<leader>c", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+
+-- Toggle spell check
+keymap("n", "<leader>s", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
+
+-- Toggle grammar check
+keymap("n", "<leader>g", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
