@@ -17,11 +17,15 @@ vim.opt.showmode = false
 vim.opt.scrolloff = 8
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.updatetime = 500
+require("gruvbox").setup({
+    contrast = "hard",
+})
 vim.cmd[[colorscheme gruvbox]]
 vim.cmd[[set spelllang=en,de]]
 vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 
 vim.g.cmp_toggle = false
+
