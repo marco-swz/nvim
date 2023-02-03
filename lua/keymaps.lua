@@ -13,10 +13,10 @@ keymap("n", "<leader>t", "<cmd>lua require('custom_functions').send()<CR>", opts
 keymap("x", "<leader>t", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
 -- Move around windows
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+--keymap("n", "<C-h>", "<C-w>h", opts)
+--keymap("n", "<C-j>", "<C-w>j", opts)
+--keymap("n", "<C-k>", "<C-w>k", opts)
+--keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize windows
 keymap("n", "<A-k>", ":res +2<cr>", opts)
@@ -25,8 +25,10 @@ keymap("n", "<A-l>", ":vertical resize +2<cr>", opts)
 keymap("n", "<A-h>", ":vertical resize -2<cr>", opts)
 
 -- Move around buffers
-keymap("n", "<S-l>", ":bnext<cr>", opts)
-keymap("n", "<S-h>", ":bprevious<cr>", opts)
+keymap("n", "<C-l>", ":bnext<cr>", opts)
+keymap("n", "<C-h>", ":bprevious<cr>", opts)
+keymap("n", "gn", ":bnext<cr>", opts)
+keymap("n", "gp", ":bprevious<cr>", opts)
 
 
 -- VISUAL MODE --
@@ -52,10 +54,10 @@ keymap("x", "<A-k>", ":move '<-2<cr>gv-gv", opts)
 
 -- TERMINAL
 vim.cmd([[:tnoremap <A-[> <C-\><C-n>]])
-vim.cmd([[:tnoremap <C-j> <C-\><C-n><C-w>j]])
-vim.cmd([[:tnoremap <C-h> <C-\><C-n><C-w>h]])
-vim.cmd([[:tnoremap <C-k> <C-\><C-n><C-w>k]])
-vim.cmd([[:tnoremap <C-l> <C-\><C-n><C-w>l]])
+--vim.cmd([[:tnoremap <C-j> <C-\><C-n><C-w>j]])
+--vim.cmd([[:tnoremap <C-h> <C-\><C-n><C-w>h]])
+--vim.cmd([[:tnoremap <C-k> <C-\><C-n><C-w>k]])
+--vim.cmd([[:tnoremap <C-l> <C-\><C-n><C-w>l]])
 
 -- VARIOUS
 -- Toggle completion
