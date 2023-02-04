@@ -15,9 +15,9 @@ vim.keymap.set('n', '<leader>fm', builtin.marks, {})
 vim.keymap.set('n', "<leader>f'", builtin.resume, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-require('telescope').setup{
-    defaults = {
-        layout_strategy = 'cursor',
-        layout_config = { height = 0.95 },
-    },
-}
+--require('telescope').setup{
+--    defaults = {
+--        layout_strategy = 'cursor',
+--        layout_config = { height = 0.95 },
+--    },
+--}
