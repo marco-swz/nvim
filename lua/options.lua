@@ -17,7 +17,7 @@ vim.opt.showmode = false
 vim.opt.scrolloff = 8
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.cursorline = false
+vim.opt.cursorline = true
 vim.opt.updatetime = 500
 require("gruvbox").setup({
     contrast = "hard",
