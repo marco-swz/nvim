@@ -3,10 +3,7 @@ local opts = { noremap = true, silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
--- Define leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 keymap("n", "<leader>n", ":Vexplore<cr>", opts)
 keymap("n", "<leader>t", "<cmd>lua require('custom_functions').send()<CR>", opts)
@@ -68,3 +65,7 @@ keymap("n", "<leader>s", "<cmd>lua require('custom_functions').toggle_spell()<cr
 
 -- Toggle grammar check
 keymap("n", "<leader>g", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
+
+-- Center after moving up and down
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
