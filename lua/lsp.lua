@@ -85,3 +85,10 @@ lsp.clangd.setup {
     flags = lsp_flags,
     capabilities = capabilities
 }
+
+lsp.tsserver.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities
+}
+
