@@ -23,4 +23,5 @@ require("lazy").setup({
     {'akinsho/bufferline.nvim', version = "v3.*"},
     'windwp/nvim-autopairs',
     {"j-hui/fidget.nvim", config = true},
+    'nvim-treesitter/nvim-treesitter-context',
 })
