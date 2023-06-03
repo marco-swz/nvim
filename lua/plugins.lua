@@ -24,4 +24,5 @@ require("lazy").setup({
     'windwp/nvim-autopairs',
     {"j-hui/fidget.nvim", config = true},
     'nvim-treesitter/nvim-treesitter-context',
+    "EdenEast/nightfox.nvim"
 })
