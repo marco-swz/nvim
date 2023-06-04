@@ -23,8 +23,8 @@ keymap("n", "<A-h>", ":vertical resize -2<cr>", opts)
 
 -- Move around buffers
 -- C-. and C-, are not Ctrl-printable
--- keymap("n", "<C-.>", ":bnext<cr>", opts)
--- keymap("n", "<C-,>", ":bprevious<cr>", opts)
+keymap("n", "<C-.>", ":bnext<cr>", opts)
+keymap("n", "<C-,>", ":bprevious<cr>", opts)
 keymap("n", "gn", ":bnext<cr>", opts)
 keymap("n", "gp", ":bprevious<cr>", opts)
 
