@@ -22,7 +22,7 @@ require("lazy").setup({
     'ellisonleao/gruvbox.nvim',
     {'akinsho/bufferline.nvim', version = "v3.*"},
     'windwp/nvim-autopairs',
-    {"j-hui/fidget.nvim", config = true},
+    {"j-hui/fidget.nvim", config = true, tag = "legacy"},
     'nvim-treesitter/nvim-treesitter-context',
     "EdenEast/nightfox.nvim"
 })
