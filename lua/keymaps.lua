@@ -27,6 +27,8 @@ keymap("n", "<C-.>", ":bnext<cr>", opts)
 keymap("n", "<C-,>", ":bprevious<cr>", opts)
 keymap("n", "gn", ":bnext<cr>", opts)
 keymap("n", "gp", ":bprevious<cr>", opts)
+keymap("n", "<S-l>", ":bnext<cr>", opts)
+keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
 
 -- VISUAL MODE --
@@ -57,6 +59,8 @@ vim.cmd([[:tnoremap <C-w>j <C-\><C-n><C-w>j]])
 vim.cmd([[:tnoremap <C-w>h <C-\><C-n><C-w>h]])
 vim.cmd([[:tnoremap <C-w>k <C-\><C-n><C-w>k]])
 vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
+--vim.cmd([[:tnoremap <S-l> <C-\><C-n>:bnext<cr>]])
+--vim.cmd([[:tnoremap <S-h> <C-\><C-n>:bprevious<cr>]])
 
 
 -- VARIOUS --
