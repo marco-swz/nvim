@@ -20,9 +20,11 @@ require("lazy").setup({
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'ellisonleao/gruvbox.nvim',
-    {'akinsho/bufferline.nvim', version = "v3.*"},
+    --{'akinsho/bufferline.nvim', version = "v3.*"},
     'windwp/nvim-autopairs',
     {"j-hui/fidget.nvim", config = true, tag = "legacy"},
     'nvim-treesitter/nvim-treesitter-context',
-    "EdenEast/nightfox.nvim"
+    'EdenEast/nightfox.nvim',
+    'nvim-lua/plenary.nvim',
+    'ThePrimeagen/harpoon',
 })
