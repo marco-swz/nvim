@@ -5,28 +5,26 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<leader>x", ":Ex<cr>", opts)
+keymap("n", "<leader>a", ":Ex<cr>", opts)
 keymap("n", "<leader>t", "<cmd>lua require('custom_functions').send()<CR>", opts)
 keymap("x", "<leader>t", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
 -- Move around windows
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<leader>h", "<C-w>h", opts)
+keymap("n", "<leader>j", "<C-w>j", opts)
+keymap("n", "<leader>k", "<C-w>k", opts)
+keymap("n", "<leader>l", "<C-w>l", opts)
 
 -- Resize windows
-keymap("n", "<A-k>", ":res +2<cr>", opts)
-keymap("n", "<A-j>", ":res -2<cr>", opts)
-keymap("n", "<A-l>", ":vertical resize +2<cr>", opts)
-keymap("n", "<A-h>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-k>", ":res +2<cr>", opts)
+keymap("n", "<C-j>", ":res -2<cr>", opts)
+keymap("n", "<C-l>", ":vertical resize +2<cr>", opts)
+keymap("n", "<C-h>", ":vertical resize -2<cr>", opts)
 
 -- Move around buffers
 -- C-. and C-, are not Ctrl-printable
 keymap("n", "<C-.>", ":bnext<cr>", opts)
 keymap("n", "<C-,>", ":bprevious<cr>", opts)
-keymap("n", "gn", ":bnext<cr>", opts)
-keymap("n", "gp", ":bprevious<cr>", opts)
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
@@ -36,10 +34,6 @@ keymap("n", "<S-h>", ":bprevious<cr>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Alt line move
-keymap("v", "<A-j>", ":m .+1<cr>==", opts)
-keymap("v", "<A-k>", ":m .-2<cr>==", opts)
-
 -- Keeps yanked word after paste
 keymap("v", "p", '"_dP', opts)
 
@@ -48,9 +42,6 @@ keymap("v", "p", '"_dP', opts)
 -- Move text left and right
 keymap("x", "J", ":move '>+1<cr>gv-gv", opts)
 keymap("x", "K", ":move '<-2<cr>gv-gv", opts)
--- Move test up and down
-keymap("x", "<A-j>", ":move '>+1<cr>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<cr>gv-gv", opts)
 
 
 -- TERMINAL --
@@ -65,13 +56,13 @@ vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 
 -- VARIOUS --
 -- Toggle completion
-keymap("n", "<leader>c", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("n", "<leader>cc", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
 
 -- Toggle spell check
-keymap("n", "<leader>s", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
+keymap("n", "<leader>cs", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
 
 -- Toggle grammar check
-keymap("n", "<leader>g", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
+keymap("n", "<leader>cg", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
 
 -- Center after moving up and down
 keymap("n", "<C-u>", "<C-u>zz", opts)
