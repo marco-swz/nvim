@@ -6,8 +6,8 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
 
 keymap("n", "<leader>a", ":Ex<cr>", opts)
-keymap("n", "<leader>t", "<cmd>lua require('custom_functions').send()<CR>", opts)
-keymap("x", "<leader>t", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
+keymap("n", "<leader>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
+keymap("x", "<leader>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
 -- Move around windows
 keymap("n", "<leader>h", "<C-w>h", opts)
@@ -56,13 +56,13 @@ vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 
 -- VARIOUS --
 -- Toggle completion
-keymap("n", "<leader>cc", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("n", "<leader>cj", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
 
 -- Toggle spell check
-keymap("n", "<leader>cs", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
+keymap("n", "<leader>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
 
 -- Toggle grammar check
-keymap("n", "<leader>cg", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
+keymap("n", "<leader>cl", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
 
 -- Center after moving up and down
 keymap("n", "<C-u>", "<C-u>zz", opts)
