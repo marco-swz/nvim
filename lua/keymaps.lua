@@ -5,7 +5,7 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<leader>a", ":Ex<cr>", opts)
+keymap("n", "<leader>a", ":Lexplore<cr>", opts)
 keymap("n", "<leader>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
 keymap("x", "<leader>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
