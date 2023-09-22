@@ -54,25 +54,21 @@ lsp.pyright.setup {
     flags = lsp_flags,
     capabilities = capabilities
 }
-
 lsp.julials.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
 }
-
 lsp.texlab.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
 }
-
 lsp.gopls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
 }
-
 lsp.rust_analyzer.setup {
     on_attach = on_attach,
     flags = lsp_flags,
@@ -88,14 +84,17 @@ lsp.clangd.setup {
     flags = lsp_flags,
     capabilities = capabilities
 }
-
 lsp.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
 }
-
 lsp.html.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities
+}
+lsp.zls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
