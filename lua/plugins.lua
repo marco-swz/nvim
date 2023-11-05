@@ -8,7 +8,7 @@ require("lazy").setup({
         dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
     },
     {
-        'nvim-telescope/telescope.nvim', version = '0.1.0',
+        'nvim-telescope/telescope.nvim',
         dependencies = { {'nvim-lua/plenary.nvim'} }
     },
     'rhysd/vim-grammarous',
@@ -19,8 +19,6 @@ require("lazy").setup({
     'hrsh7th/nvim-cmp',
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
-    'ellisonleao/gruvbox.nvim',
-    --{'akinsho/bufferline.nvim', version = "v3.*"},
     'windwp/nvim-autopairs',
     {"j-hui/fidget.nvim", config = true, tag = "legacy"},
     'nvim-treesitter/nvim-treesitter-context',

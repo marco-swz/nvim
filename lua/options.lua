@@ -19,9 +19,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.cursorline = true
 vim.opt.updatetime = 500
-require("gruvbox").setup({
-    contrast = "hard",
-})
 vim.cmd[[colorscheme nightfox]]
 vim.cmd[[set spelllang=en,de]]
 vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
