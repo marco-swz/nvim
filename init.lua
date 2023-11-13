@@ -11,18 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Define leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 require "plugins"
 require "options"
 require "keymaps"
 require "_lsp"
 require "_treesitter"
+require "_treesitter_context"
 require "_lualine"
 require "custom_functions"
-require "_completion"
+require "_cmp"
 require "_telescope"
 require "_autopairs"
 require "_harpoon"
