@@ -21,7 +21,7 @@
 	in {
 		devShell = pkgs.mkShell {
 			packages = (with pkgs; [
-				neovim
+				neovim-configured
 			]);
 		};
 	});

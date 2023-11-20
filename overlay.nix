@@ -1,5 +1,5 @@
 final: prev: {
-    neovim = prev.neovim.override {
+    neovim-configured = prev.neovim.override {
         configure = {
             customRC = ''
                 luafile ${./lua/options.lua}
