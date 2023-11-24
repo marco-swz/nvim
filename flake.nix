@@ -18,11 +18,13 @@
 		];
 	};
 
-	in {
-		devShell = pkgs.mkShell {
+	in rec {
+		devShells.default = pkgs.mkShell {
 			packages = (with pkgs; [
 				neovim-configured
 			]);
 		};
+
+        devShell = devShells.default;
 	});
 }
