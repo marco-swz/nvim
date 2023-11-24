@@ -8,7 +8,6 @@ final: prev: {
             '';
             packages.myVimPlugins = with prev.vimPlugins; {
                 start = [
-                    #nvim-config
                     nightfox-nvim
                     mason-nvim
                     cmp-nvim-lsp
