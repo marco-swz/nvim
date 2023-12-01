@@ -1,10 +1,10 @@
 local builtin2 = require('telescope.builtin')
 local keymap = vim.keymap.set
 
-keymap('n', '<space>fh', builtin2.diagnostics, {})
+keymap('n', '<space>fh', builtin2.lsp_workspace_symbols, {})
 keymap('n', '<space>fj', builtin2.find_files, {})
-keymap('n', '<space>fk', builtin2.git_files, {})
-keymap('n', '<space>fl', builtin2.lsp_workspace_symbols, {})
+keymap('n', '<space>fk', builtin2.diagnostics, {})
+keymap('n', '<space>fl', builtin2.git_files, {})
 keymap('n', '<space>fb', builtin2.commands, {})
 keymap('n', '<space>f;', builtin2.commands, {})
               
