@@ -23,3 +23,16 @@ require "_cmp"
 require "_telescope"
 require "_autopairs"
 require "_harpoon"
+
+vim.cmd('hi Normal guibg=#081426')
+vim.cmd('hi NormalNC guibg=#081426')
+vim.cmd('hi Search guibg=#081426')
+vim.cmd('hi Visual guibg=#081426')
+vim.cmd('hi Pmenu guibg=#081426')
+vim.cmd('hi LspReferenceText guibg=#081426')
+vim.cmd('hi WinBar guibg=#081426')
+vim.cmd('hi WinBarNC guibg=#081426')
+
+vim.cmd('hi TabLineSel guifg=#081426')
+vim.cmd('hi Cursor guifg=#081426')
+vim.cmd('hi Todo guifg=#081426')
