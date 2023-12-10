@@ -24,15 +24,35 @@ require "_telescope"
 require "_autopairs"
 require "_harpoon"
 
-vim.cmd('hi Normal guibg=#081426')
-vim.cmd('hi NormalNC guibg=#081426')
-vim.cmd('hi Search guibg=#081426')
-vim.cmd('hi Visual guibg=#081426')
-vim.cmd('hi Pmenu guibg=#081426')
-vim.cmd('hi LspReferenceText guibg=#081426')
-vim.cmd('hi WinBar guibg=#081426')
-vim.cmd('hi WinBarNC guibg=#081426')
+local p = {
+    bg = {
+        dark1 = "#060e1a",
+        normal = "#081426",
+        bright1 = "#0b1b32", 
+        bright2 = "#102543", 
+    },
+    fg = {
+        blue = "#578cdb", 
+        dark1 = "#eff4fb",
+        normal = "#c2c2c2",
+    },
+}
 
-vim.cmd('hi TabLineSel guifg=#081426')
-vim.cmd('hi Cursor guifg=#081426')
-vim.cmd('hi Todo guifg=#081426')
+local highlight = vim.api.nvim_set_hl
+
+highlight(0, "Normal", { bg = p.bg.normal })
+highlight(0, "NormalNC", { bg = p.bg.normal })
+highlight(0, "Search", { bg = p.bg.normal })
+highlight(0, "Pmenu", { bg = p.bg.normal })
+highlight(0, "LspReferenceText", { bg = p.bg.normal })
+highlight(0, "WinBar", { bg = p.bg.normal })
+highlight(0, "WinBarNC", { bg = p.bg.normal })
+
+highlight(0, "TabLineSel", { fg = p.bg.normal })
+highlight(0, "Cursor", { fg = p.bg.normal })
+highlight(0, "Todo", { fg = p.bg.normal })
+
+highlight(0, "CursorLine", { bg = p.bg.bright1 })
+
+highlight(0, "Visual", { bg = p.bg.bright2 })
+
