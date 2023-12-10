@@ -109,6 +109,11 @@ highlight(0, "BufferVisibleMod", { fg = p.col.yellow, bg = p.bg.dark1 })
 -- highlight(0, "lualine_a_command", { fg = p.bg.normal, bg = p.col.yellow, bold = true })
 highlight(0, "@text.warning", { fg = p.bg.normal, bg = p.col.yellow })
 
+-- DARK1 Background
+
+highlight(0, "lualine_c_normal", { bg = p.bg.dark1})
+
+-- NORMAL Background
 
 highlight(0, "Normal", { bg = p.bg.normal })
 highlight(0, "NormalNC", { bg = p.bg.normal })
