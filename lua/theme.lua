@@ -7,7 +7,8 @@ local p = {
     },
     fg = {
         blue = "#578cdb", 
-        dark1 = "#eff4fb",
+        dark2 = "#eff4fb",
+        dark1 = "#71839b",
         normal = "#c2c2c2",
     },
     col = {
@@ -108,4 +109,10 @@ highlight(0, "CursorLine", { bg = p.bg.bright1 })
 highlight(0, "Visual", { bg = p.bg.bright2 })
 
 highlight(0, "Todo", { fg = p.bg.normal, bg = p.fg.blue })
+
+highlight(0, "HarpoonInactive", { fg = p.fg.dark1, bg = NONE })
+highlight(0, "HarpoonActive", { fg = p.fg.normal, bg = NONE })
+highlight(0, "HarpoonNumberActive", { fg = p.fg.normal, bg = NONE })
+highlight(0, "HarpoonNumberInactive", { fg = p.fg.dark1, bg = NONE })
+highlight(0, "TabLineFill", { bg = p.bg.dark1 })
 

@@ -25,6 +25,4 @@ require("lazy").setup({
     'EdenEast/nightfox.nvim',
     'nvim-lua/plenary.nvim',
     'ThePrimeagen/harpoon',
-    'bluz71/vim-nightfly-colors',
-    'oxfist/night-owl.nvim',
 })

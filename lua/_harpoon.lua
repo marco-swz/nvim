@@ -21,8 +21,3 @@ vim.keymap.set("n", "<space>y", function() ui.nav_file(7) end)
 vim.keymap.set("n", "<space>p", function() ui.nav_file(8) end)
 vim.keymap.set("n", "<space>i", function() ui.nav_file(9) end)
 
-vim.cmd('highlight! HarpoonInactive guibg=NONE guifg=#71839b')
-vim.cmd('highlight! HarpoonActive guibg=NONE guifg=#ffffff')
-vim.cmd('highlight! HarpoonNumberInactive guibg=NONE guifg=#71839b')
-vim.cmd('highlight! HarpoonNumberActive guibg=NONE guifg=#ffffff')
-vim.cmd('highlight! TabLineFill guibg=NONE guifg=#ffffff')
