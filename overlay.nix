@@ -5,6 +5,7 @@ final: prev: {
                 luafile ${./lua/options.lua}
                 luafile ${./lua/keymaps.lua}
                 luafile ${./lua/custom_functions.lua}
+                luafile ${./lua/theme.lua}
             '';
             packages.myVimPlugins = with prev.vimPlugins; {
                 start = [
