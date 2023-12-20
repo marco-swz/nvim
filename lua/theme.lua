@@ -16,9 +16,10 @@ local p = {
         orange = "#f4a261",
         yellow = "#dbc074",
         blue = "#86abdc",
-        purple = "#86abdc",
+        purple = "#9d79d6",
         pink = "#dc8ed9",
         green = "#81b29a",
+        cyan = "#63cdcf",
     }
 }
 
