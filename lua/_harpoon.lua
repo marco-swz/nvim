@@ -21,3 +21,13 @@ vim.keymap.set("n", "<space>y", function() ui.nav_file(7) end)
 vim.keymap.set("n", "<space>p", function() ui.nav_file(8) end)
 vim.keymap.set("n", "<space>i", function() ui.nav_file(9) end)
 
+vim.keymap.set("n", "<space>1", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<space>2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<space>3", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<space>4", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<space>5", function() ui.nav_file(5) end)
+vim.keymap.set("n", "<space>6", function() ui.nav_file(6) end)
+vim.keymap.set("n", "<space>7", function() ui.nav_file(7) end)
+vim.keymap.set("n", "<space>8", function() ui.nav_file(8) end)
+vim.keymap.set("n", "<space>9", function() ui.nav_file(9) end)
+
