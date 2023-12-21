@@ -78,12 +78,13 @@ highlight(0, "DapUIType", { fg = p.col.yellow })
 
 highlight(0, "BufferVisibleMod", { fg = p.col.yellow, bg = p.bg.dark1 })
 
--- highlight(0, "CursorLineNr", { fg = p.col.yellow, bold = true })
--- highlight(0, "MatchParen", { fg = p.col.yellow, bold = true })
+highlight(0, "CursorLineNr", { fg = p.col.yellow, bold = true })
+highlight(0, "MatchParen", { fg = p.col.yellow, bold = true })
 
 -- YELLOW Background
--- highlight(0, "MiniStatuslineModeCommand", { fg = p.bg.normal, bg = p.col.yellow, bold = true })
--- highlight(0, "lualine_a_command", { fg = p.bg.normal, bg = p.col.yellow, bold = true })
+
+highlight(0, "MiniStatuslineModeCommand", { fg = p.bg.normal, bg = p.col.yellow, bold = true })
+highlight(0, "lualine_a_command", { fg = p.bg.normal, bg = p.col.yellow, bold = true })
 highlight(0, "@text.warning", { fg = p.bg.normal, bg = p.col.yellow })
 
 -- RED Foreground
@@ -201,8 +202,63 @@ highlight(0, "GitSignsDelete", { fg = p.col.red })
 highlight(0, "GitGutterDelete", { fg = p.col.red })
 highlight(0, "@text.diff.delete", { fg = p.col.red })
 
--- highlight(0, "MiniTestFail", { fg = p.col.red, bold = true })
--- highlight(0, "@text.strong", { fg = p.col.red, bold = true })
+highlight(0, "MiniTestFail", { fg = p.col.red, bold = true })
+highlight(0, "@text.strong", { fg = p.col.red, bold = true })
+
+-- ORANGE Foreground
+
+highlight(0, "Constant", { fg = p.col.orange })
+highlight(0, "@constant", { link = "Constant" })
+highlight(0, "@constant.builtin", { link = "Constant" })
+highlight(0, "TelescopeResultsConstant", { link = "Constant" })
+highlight(0, "CmpItemKindConstant", { link = "Constant" })
+highlight(0, "NavicIconsConstant", { link = "Constant" })
+
+highlight(0, "Number", { fg = p.col.orange })
+highlight(0, "@number", { link = "Number" })
+highlight(0, "NvimNumber", { link = "Number" })
+highlight(0, "TelescopeResultsNumber", { link = "Number" })
+highlight(0, "NavicIconsNumber", { link = "Number" })
+
+highlight(0, "Boolean", { fg = p.col.orange })
+highlight(0, "@boolean", { link = "Boolean" })
+highlight(0, "NavicIconsBoolean", { link = "Boolean" })
+
+highlight(0, "Float", { fg = p.col.orange })
+highlight(0, "@float", { link = "Float" })
+highlight(0, "NvimFloat", { link = "Float" })
+
+highlight(0, "@lsp.type.enumMember", { fg = p.col.orange })
+highlight(0, "CmpItemKindEnum", { link = "@lsp.type.enumMember" })
+highlight(0, "NavicIconsEnum", { link = "@lsp.type.enumMember" })
+
+highlight(0, "TelescopePreviewGroup", { fg = p.col.orange })
+highlight(0, "TelescopePreviewRead", { fg = p.col.orange })
+highlight(0, "TelescopePreviewBlock", { fg = p.col.orange })
+highlight(0, "TelescopePreviewCharDev", { fg = p.col.orange })
+highlight(0, "TelescopePreviewPipe", { fg = p.col.orange })
+highlight(0, "CmpItemKindInterface", { fg = p.col.orange })
+highlight(0, "CmpItemKindUnit", { fg = p.col.orange })
+highlight(0, "CmpItemKindEvent", { fg = p.col.orange })
+highlight(0, "diffLine", { fg = p.col.orange })
+highlight(0, "AlphaShortCut", { fg = p.col.orange })
+highlight(0, "AlphaHeaderLabel", { fg = p.col.orange })
+highlight(0, "NavicIconsEvent", { fg = p.col.orange })
+highlight(0, "NavicIconsInterface", { fg = p.col.orange })
+highlight(0, "NeotestRunning", { fg = p.col.orange })
+highlight(0, "NvimTreeGitMerge", { fg = p.col.orange })
+highlight(0, "IndentBlanklineIndent3", { fg = p.col.orange })
+highlight(0, "DapUILineNumber", { fg = p.col.orange })
+highlight(0, "DapUIBreakpointsLine", { fg = p.col.orange })
+highlight(0, "TSRainbowOrange", { fg = p.col.orange })
+highlight(0, "@attribute", { fg = p.col.orange })
+
+highlight(0, "NeoTreeRootName", { fg = p.col.orange, bold = true })
+highlight(0, "NvimTreeRootFolder", { fg = p.col.orange, bold = true })
+highlight(0, "NeoTreeGitConflict", { fg = p.col.orange, italic = true })
+highlight(0, "DashboardFooter", { fg = p.col.orange, italic = true })
+highlight(0, "MiniStarterFooter", { fg = p.col.orange, italic = true })
+highlight(0, "@text.uri", { fg = p.col.orange, underline = true, italic = true })
 
 -- DARK1 Background
 
