@@ -1,5 +1,4 @@
 require("lazy").setup({
-    "wbthomason/packer.nvim",
     "williamboman/mason.nvim",
     "neovim/nvim-lspconfig",
     "nvim-treesitter/nvim-treesitter",
