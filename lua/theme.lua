@@ -286,9 +286,9 @@ highlight(0, "Visual", { bg = p.bg.bright2 })
 
 highlight(0, "Todo", { fg = p.bg.normal, bg = p.fg.blue })
 
-highlight(0, "HarpoonInactive", { fg = p.fg.dark1, bg = NONE })
-highlight(0, "HarpoonActive", { fg = p.fg.normal, bg = NONE })
-highlight(0, "HarpoonNumberActive", { fg = p.fg.normal, bg = NONE })
-highlight(0, "HarpoonNumberInactive", { fg = p.fg.dark1, bg = NONE })
+highlight(0, "HarpoonInactive", { fg = p.fg.dark1, bg = p.bg.dark1 })
+highlight(0, "HarpoonActive", { fg = p.fg.normal, bg = p.bg.dark1 })
+highlight(0, "HarpoonNumberActive", { fg = p.fg.normal, bg = p.bg.dark1 })
+highlight(0, "HarpoonNumberInactive", { fg = p.fg.dark1, bg = p.bg.dark1 })
 highlight(0, "TabLineFill", { bg = p.bg.dark1 })
 
