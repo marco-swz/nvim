@@ -19,6 +19,8 @@
 	};
 
 	in rec {
+        packages.default = pkgs.callPackage ./neovim_config.nix {};
+
 		devShells.default = pkgs.mkShell {
 			packages = (with pkgs; [
 				neovim-configured
