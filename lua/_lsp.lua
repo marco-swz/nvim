@@ -48,6 +48,8 @@ local lsp_flags = {
 }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 
 lsp.pyright.setup {
     on_attach = on_attach,
@@ -92,7 +94,8 @@ lsp.tsserver.setup {
 lsp.html.setup {
     on_attach = on_attach,
     flags = lsp_flags,
-    capabilities = capabilities
+    capabilities = capabilities,
+    filetypes = { "html", "php" }
 }
 lsp.zls.setup {
     on_attach = on_attach,
@@ -103,4 +106,10 @@ lsp.cssls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities
+}
+lsp.htmx.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    filetypes = { "html", "php" }
 }
