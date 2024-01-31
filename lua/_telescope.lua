@@ -18,3 +18,22 @@ keymap('n', '<space>fn', builtin2.jumplist, {})
 keymap('n', '<space>fm', builtin2.marks, {})
 keymap('n', '<space>f,', builtin2.keymaps, {})
 keymap('n', "<space>f.", builtin2.resume, {})
+
+require('telescope').setup{
+    file_ignore_patterns = {
+        '.git/',
+        '.cache/',
+        '.history/',
+        '%.zip',
+        '%.png',
+        '%.PNG',
+        '%.jpeg',
+        '%.jpg',
+        '%.o',
+        '%.a',
+        '%.out',
+        '%.class',
+        '%.pdf',
+        '%.exe',
+    }
+}
