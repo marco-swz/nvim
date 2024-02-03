@@ -1,7 +1,3 @@
--- Define leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.splitbelow = true

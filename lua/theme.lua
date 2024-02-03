@@ -1,27 +1,28 @@
+
 local p = {
-    bg = {
-        dark2 = "#04060e",
-        dark1 = "#060e1a",
-        normal = "#081426",
-        bright1 = "#0b1b32", 
-        bright2 = "#102543", 
-    },
-    fg = {
-        blue = "#578cdb", 
-        dark2 = "#eff4fb",
-        dark1 = "#71839b",
-        normal = "#c2c2c2",
-    },
-    col = {
-        red = "#c94f6d",
-        orange = "#f4a261",
-        yellow = "#dbc074",
-        blue = "#86abdc",
-        purple = "#9d79d6",
-        pink = "#dc8ed9",
-        green = "#81b29a",
-        cyan = "#63cdcf",
-    }
+	bg = {
+		dark2 = "#04060e",
+		dark1 = "#060e1a",
+		normal = "#081426",
+		bright1 = "#0b1b32", 
+		bright2 = "#102543", 
+	},
+	fg = {
+		blue = "#578cdb", 
+		dark2 = "#eff4fb",
+		dark1 = "#71839b",
+		normal = "#c2c2c2",
+	},
+	col = {
+		red = "#c94f6d",
+		orange = "#f4a261",
+		yellow = "#dbc074",
+		blue = "#86abdc",
+		purple = "#9d79d6",
+		pink = "#dc8ed9",
+		green = "#81b29a",
+		cyan = "#63cdcf",
+	}
 }
 
 local highlight = vim.api.nvim_set_hl
@@ -291,4 +292,3 @@ highlight(0, "HarpoonActive", { fg = p.fg.normal, bg = p.bg.dark1 })
 highlight(0, "HarpoonNumberActive", { fg = p.fg.normal, bg = p.bg.dark1 })
 highlight(0, "HarpoonNumberInactive", { fg = p.fg.dark1, bg = p.bg.dark1 })
 highlight(0, "TabLineFill", { bg = p.bg.dark1 })
-

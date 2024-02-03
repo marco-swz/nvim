@@ -3,6 +3,10 @@ local opts = { noremap = true, silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+-- Define leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 keymap("", "<Space>", "<Nop>", opts)
 
 keymap("n", "<space>a", ":Lexplore<cr>", opts)
