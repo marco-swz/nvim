@@ -11,17 +11,17 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require "plugins"
-require "options"
-require "keymaps"
+require "_plugins"
+require "_options"
+require "_keymaps"
 require "_lsp"
 require "_treesitter"
 require "_treesitter_context"
 require "_lualine"
-require "custom_functions"
+require "_custom_functions"
 require "_cmp"
 require "_telescope"
 require "_autopairs"
 require "_harpoon"
-require "theme"
+require "_theme"
 

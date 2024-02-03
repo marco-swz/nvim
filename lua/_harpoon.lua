@@ -11,6 +11,7 @@ vim.keymap.set("n", "sj", ui.toggle_quick_menu)
 vim.keymap.set("n", "<space>sj", ui.toggle_quick_menu)
 vim.keymap.set("n", "ss", mark.add_file)
 vim.keymap.set("n", "<space>ss", mark.add_file)
+
 vim.keymap.set("n", "<space>u", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<space>q", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<space>w", function() ui.nav_file(3) end)

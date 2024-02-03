@@ -1,0 +1,7 @@
+{
+  "For Loop": {
+    "prefix": ["fe"],
+    "body": ["foreach ({1:array} as ${2:element}) {", "\t$0", "}"],
+    "description": "A for loop."
+  }
+}

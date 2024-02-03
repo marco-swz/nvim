@@ -30,11 +30,6 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>db', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<space>d;', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<C-i>', vim.lsp.buf.signature_help, bufopts)
-    vim.keymap.set('n', '<space>zk', vim.lsp.buf.add_workspace_folder, bufopts)
-    vim.keymap.set('n', '<space>zl', vim.lsp.buf.remove_workspace_folder, bufopts)
-    vim.keymap.set('n', '<space>zj', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, bufopts)
     vim.keymap.set('n', '<space>do', vim.lsp.buf.type_definition, bufopts)
     vim.keymap.set('n', '<space>du', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<space>dh', vim.lsp.buf.code_action, bufopts)
@@ -48,8 +43,7 @@ local lsp_flags = {
 }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
-
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lsp.pyright.setup {
     on_attach = on_attach,
@@ -89,7 +83,8 @@ lsp.clangd.setup {
 lsp.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
-    capabilities = capabilities
+    capabilities = capabilities,
+    filetypes = { "html", "php" }
 }
 lsp.html.setup {
     on_attach = on_attach,

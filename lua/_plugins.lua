@@ -16,7 +16,7 @@ require("lazy").setup({
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
-    'L3MON4D3/LuaSnip',
+    { 'L3MON4D3/LuaSnip', tag = 'v2.*', },
     'saadparwaiz1/cmp_luasnip',
     'windwp/nvim-autopairs',
     {"j-hui/fidget.nvim", config = true, tag = "legacy"},

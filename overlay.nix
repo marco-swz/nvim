@@ -2,10 +2,10 @@ final: prev: {
     neovim-configured = prev.neovim.override {
         configure = {
             customRC = ''
-                luafile ${./lua/options.lua}
-                luafile ${./lua/keymaps.lua}
-                luafile ${./lua/custom_functions.lua}
-                luafile ${./lua/theme.lua}
+                luafile ${./lua/_options.lua}
+                luafile ${./lua/_keymaps.lua}
+                luafile ${./lua/_custom_functions.lua}
+                luafile ${./lua/_theme.lua}
             '';
             packages.myVimPlugins = with prev.vimPlugins; {
                 start = [
