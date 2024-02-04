@@ -1,7 +1,18 @@
 {
-  "For Loop": {
-    "prefix": ["fe"],
-    "body": ["foreach ({1:array} as ${2:element}) {", "\t$0", "}"],
-    "description": "A for loop."
-  }
+    "@var": {
+        "prefix": ["@v"],
+        "body": ["/** @var $0 */"],
+        "description": "PHPDoc @var"
+    },
+    "@function": {
+        "prefix": ["@f"],
+        "body": [
+            "/**",
+            " * $0",
+            " * @param ${2:type} ${3:name}",
+            " * @return ${1:void}",
+            " */"
+        ],
+        "description": "PHPDoc function"
+    }
 }

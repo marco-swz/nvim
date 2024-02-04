@@ -1,0 +1,12 @@
+{
+    "@type": {
+        "prefix": ["@v"],
+        "body": ["/** @type {$0} */"],
+        "description": "JSDoc @type"
+    },
+    "@type-const": {
+        "prefix": ["@c"],
+        "body": ["/** @const @type {$0} */"],
+        "description": "JSDoc @cost @type"
+    },
+}

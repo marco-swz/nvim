@@ -20,10 +20,10 @@ keymap("n", "<space>k", "<C-w>k", opts)
 keymap("n", "<space>l", "<C-w>l", opts)
 
 -- Resize windows
-keymap("n", "<C-k>", ":res +2<cr>", opts)
-keymap("n", "<C-j>", ":res -2<cr>", opts)
-keymap("n", "<C-l>", ":vertical resize +2<cr>", opts)
-keymap("n", "<C-h>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-S-k>", ":res +2<cr>", opts)
+keymap("n", "<C-S-j>", ":res -2<cr>", opts)
+keymap("n", "<C-S-h>", ":vertical resize +2<cr>", opts)
+keymap("n", "<C-S-j>", ":vertical resize -2<cr>", opts)
 
 -- Move around buffers
 -- C-. and C-, are not Ctrl-printable
