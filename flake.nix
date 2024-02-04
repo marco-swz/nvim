@@ -19,7 +19,7 @@
 	};
 
 	in rec {
-        packages.default = pkgs.callPackage ./neovim_config.nix {};
+        packages.default = pkgs.neovimc;
 
 		devShells.default = pkgs.mkShell {
 			packages = (with pkgs; [
