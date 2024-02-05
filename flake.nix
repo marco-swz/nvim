@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Neovim with custom configuration";
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -23,7 +23,7 @@
 
 		devShells.default = pkgs.mkShell {
 			packages = (with pkgs; [
-				neovim-configured
+				neovimc
 			]);
 		};
 
