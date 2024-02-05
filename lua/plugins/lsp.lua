@@ -77,7 +77,17 @@ return {
 		lsp.intelephense.setup {
 			on_attach = on_attach,
 			flags = lsp_flags,
-			capabilities = capabilities
+			capabilities = capabilities,
+            settings = {
+                intelephense = {
+                    environment = {
+                        phpVersion = "8.3.0",
+                    },
+                    format = {
+                        braces = "k&r",
+                    },
+                },
+            },
 		}
 		lsp.clangd.setup {
 			on_attach = on_attach,
