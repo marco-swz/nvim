@@ -14,5 +14,23 @@
             " */"
         ],
         "description": "PHPDoc function"
+    },
+    "sql-block": {
+        "prefix": ["<s"],
+        "body": [
+            "<<<SQL",
+            "\t$0",
+            "SQL;"
+        ],
+        "description": "Multiline SQL block"
+    },
+    "html-block": {
+        "prefix": ["<h"],
+        "body": [
+            "<<<HTML",
+            "\t$0",
+            "HTML;"
+        ],
+        "description": "Multiline HTML block"
     }
 }
