@@ -264,6 +264,8 @@ highlight(0, "@text.uri", { fg = p.col.orange, underline = true, italic = true }
 -- DARK1 Background
 
 highlight(0, "lualine_c_normal", { bg = p.bg.dark1})
+highlight(0, "TreesitterContext", { bg = p.bg.dark1})
+highlight(0, "TreesitterContextLineNumber", { bg = p.bg.dark1})
 
 -- NORMAL Background
 
