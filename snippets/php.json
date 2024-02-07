@@ -20,7 +20,7 @@
         "body": [
             "<<<SQL",
             "\t$0",
-            "SQL;"
+            "SQL"
         ],
         "description": "Multiline SQL block"
     },
@@ -29,7 +29,7 @@
         "body": [
             "<<<HTML",
             "\t$0",
-            "HTML;"
+            "HTML"
         ],
         "description": "Multiline HTML block"
     }
