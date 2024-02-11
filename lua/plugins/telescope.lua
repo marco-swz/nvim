@@ -20,8 +20,8 @@ return {
 		keymap('n', '<space>fb', builtin2.commands, {})
 		keymap('n', '<space>f;', builtin2.commands, {})
 	  
-		keymap('n', '<space>fn', builtin2.buffers, {})
-		keymap('n', '<space>fm', builtin2.marks, {})
+		keymap('n', '<space>fn', builtin2.marks, {})
+		keymap('n', '<space>fm', builtin2.buffers, {})
 		keymap('n', '<space>f,', builtin2.keymaps, {})
 		keymap('n', "<space>f.", builtin2.resume, {})
 
@@ -31,6 +31,7 @@ return {
 				'.cache',
 				'.history',
 				'%.zip',
+				'%.gz',
 				'%.png',
 				'%.PNG',
 				'%.jpeg',
