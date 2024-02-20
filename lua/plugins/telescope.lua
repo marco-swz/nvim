@@ -29,6 +29,7 @@ return {
 			file_ignore_patterns = {
 				'.git',
 				'.cache',
+                '__pycache__',
 				'.history',
 				'%.zip',
 				'%.gz',
