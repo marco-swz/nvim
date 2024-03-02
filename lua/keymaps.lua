@@ -32,6 +32,10 @@ keymap("n", "<C-,>", ":bprevious<cr>", opts)
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
+-- Copy/paste using the system clipboard
+keymap("n", "<space>y", '"+y', opts)
+keymap("n", "<space>p", '"+p', opts)
+
 
 -- VISUAL MODE --
 -- Stay in indent mode
