@@ -98,7 +98,7 @@ return {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
-			filetypes = { "html", "php" }
+			filetypes = { "javascript", "typescript", "html", "php" }
 		}
 		lsp.html.setup {
 			on_attach = on_attach,
