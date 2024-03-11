@@ -53,7 +53,7 @@ keymap("x", "K", ":move '<-2<cr>gv-gv", opts)
 
 
 -- TERMINAL --
-vim.cmd([[:tnoremap <A-[> <C-\><C-n>]])
+vim.cmd([[:tnoremap <esc> <C-\><C-n>]])
 vim.cmd([[:tnoremap <C-w>j <C-\><C-n><C-w>j]])
 vim.cmd([[:tnoremap <C-w>h <C-\><C-n><C-w>h]])
 vim.cmd([[:tnoremap <C-w>k <C-\><C-n><C-w>k]])
