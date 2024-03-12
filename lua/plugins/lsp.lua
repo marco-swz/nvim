@@ -34,7 +34,7 @@ return {
 			vim.keymap.set('n', '<space>db', vim.lsp.buf.implementation, bufopts)
 			vim.keymap.set('n', '<space>d;', vim.lsp.buf.implementation, bufopts)
 			vim.keymap.set('n', '<space>di', vim.lsp.buf.signature_help, bufopts)
-			vim.keymap.set('i', '<C-i>', vim.lsp.buf.signature_help, bufopts)
+			vim.keymap.set('i', '<C-j>', vim.lsp.buf.signature_help, bufopts)
 			vim.keymap.set('n', '<space>dp', vim.lsp.buf.type_definition, bufopts)
 			vim.keymap.set('n', '<space>du', vim.lsp.buf.rename, bufopts)
 			vim.keymap.set('n', '<space>dh', vim.lsp.buf.code_action, bufopts)
