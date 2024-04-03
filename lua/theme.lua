@@ -1,11 +1,16 @@
 
 local p = {
 	bg = {
-		dark2 = "#04060e",
-		dark1 = "#060e1a",
-		normal = "#081426",
-		bright1 = "#0b1b32", 
-		bright2 = "#102543", 
+		--dark2 = "#04060e",
+        dark2 = "#00070c",
+		--dark1 = "#060e1a",
+        dark1 = "#010b14",
+		--normal = "#081426",
+		normal = "#011627",
+		--bright1 = "#0b1b32", 
+        bright1 = "#1a2d3d",
+		--bright2 = "#102543", 
+        bright2 = "#344552",
 	},
 	fg = {
 		blue = "#578cdb", 
