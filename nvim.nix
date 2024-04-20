@@ -6,6 +6,8 @@ stdenv.mkDerivation rec {
 
     buildInputs = [ pkgs.neovim pkgs.makeWrapper ];
 
+    propagatedBuildInputs = [pkgs.fd pkgs.ripgrep];
+
     binScript = ''
         #!${runtimeShell}
         XDG_CONFIG_HOME=${placeholder "out"} ${pkgs.neovim}/bin/nvim $@

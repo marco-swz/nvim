@@ -27,10 +27,12 @@ return {
 
 		require('telescope').setup{
 			file_ignore_patterns = {
-				'.git',
-				'.cache',
-                '__pycache__',
-				'.history',
+				'.git/',
+				'.cache/',
+                '__pycache__/',
+				'.history/',
+                'venv/',
+                'vendor/',
 				'%.zip',
 				'%.gz',
 				'%.png',
