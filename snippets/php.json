@@ -15,6 +15,15 @@
         ],
         "description": "PHPDoc function"
     },
+    "foreach": {
+        "prefix": ["fe"],
+        "body": [
+            "foreach (${1:list} as ${2:elem}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "foreach"
+    },
     "sql-block": {
         "prefix": ["<s"],
         "body": [
