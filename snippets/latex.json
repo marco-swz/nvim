@@ -1,0 +1,18 @@
+{
+    "begin": {
+        "prefix": ["be"],
+        "body": [
+            "\\begin{$1}",
+            "$0,
+            "\\end{$1}"
+        ],
+        "description": "begin - end block"
+    },
+    "frac": {
+        "prefix": ["fr"],
+        "body": [
+            "\\frac{$1}{$0}"
+        ],
+        "description": "fraction"
+    }
+}

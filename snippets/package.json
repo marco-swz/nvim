@@ -15,6 +15,14 @@
                 "path": "./php.json"
             },
             {
+                "language": "latex",
+                "path": "./latex.json"
+            },
+            {
+                "language": "markdown",
+                "path": "./latex.json"
+            },
+            {
                 "language": "javascript",
                 "path": "./javascript.json"
             }
