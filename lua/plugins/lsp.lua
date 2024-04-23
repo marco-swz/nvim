@@ -123,5 +123,11 @@ return {
 			capabilities = capabilities,
 			filetypes = { "html", "php" }
 		}
+        lsp.ltex.setup {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+            filetypes = { "markdown", "tex", "bib", "pandoc" }
+        }
 	end
 }
