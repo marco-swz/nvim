@@ -39,8 +39,8 @@ keymap("n", "<space>p", '"+p', opts)
 -- Centering
 keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
-keymap("n", "<C-o>", "<C-o>zz", opts)
-keymap("n", "<C-i>", "<C-i>zz", opts)
+keymap("n", "<C-w>", "<C-o>zz", opts)
+keymap("n", "<C-e>", "<C-i>zz", opts)
 
 -- VISUAL MODE --
 -- Stay in indent mode
