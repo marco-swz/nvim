@@ -42,6 +42,10 @@ keymap("n", "N", "Nzz", opts)
 keymap("n", "<C-o>", "<C-o>zz", opts)
 keymap("n", "<C-i>", "<C-i>zz", opts)
 
+-- Jump up/down
+keymap("n", "J", "<C-d>zz", opts)
+keymap("n", "K", "<C-u>zz", opts)
+
 -- VISUAL MODE --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
