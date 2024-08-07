@@ -1,17 +1,16 @@
+err_buf = nil
 local function print_to_err_buf(data)
-    if err_buf == nil then
+    print(vim.inspect(err_buf))
+    if err_buf == nil or vim.fn.bufexists(err_buf) ~= 1 or vim.fn.bufname(err_buf) ~= 'AutoRun Error' then
         err_buf = vim.api.nvim_create_buf(true, true)
         vim.api.nvim_buf_set_name(err_buf, 'AutoRun Error')
     end
-
-    -- Get or create buffer (in case it doesn't exist anymore)
-    err_buf = vim.fn.bufnr(err_buf, true)
 
     -- Make it temporarily writable so we don't have warnings.
     vim.api.nvim_buf_set_option(err_buf, "readonly", false)
 
     -- Show buffer if not visible and empty
-    if vim.fn.bufwinnr(err_buf) ~= vim.api.nvim_win_get_number(0) then
+    if vim.fn.bufwinnr(err_buf) == -1 then
         vim.api.nvim_command('20sp')
         vim.api.nvim_win_set_buf(0, err_buf)
         vim.api.nvim_buf_set_lines(err_buf, 0, -1, false, { '' })
@@ -42,17 +41,15 @@ local function run_term_command(command)
             stdout_buffered = true,
             stderr_buffered = true,
             on_stderr = function(_, data)
-                if data then
+                _, msg = next(data)
+                if msg and msg ~= '' then
                     print_to_err_buf(data)
-                else
-                    print_to_err_buf({ 'Empty error' })
                 end
             end,
         }
     )
 end
 
-err_buf = nil
 vim.api.nvim_create_user_command('RunSass', function() 
     local file_path = vim.fn.expand('%:p') 
     local dir = vim.fn.expand('%:p:h')
