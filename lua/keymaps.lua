@@ -10,8 +10,8 @@ vim.g.maplocalleader = " "
 keymap("", "<Space>", "<Nop>", opts)
 
 keymap("n", "<space>a", ":Lexplore<cr>", opts)
-keymap("n", "<space>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
-keymap("x", "<space>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
+--keymap("n", "<space>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
+--keymap("x", "<space>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
 -- Move around windows
 keymap("n", "<space>h", "<C-w>h", opts)
@@ -24,6 +24,7 @@ keymap("n", "<C-S-k>", ":res +2<cr>", opts)
 keymap("n", "<C-S-j>", ":res -2<cr>", opts)
 keymap("n", "<C-S-h>", ":vertical resize +2<cr>", opts)
 keymap("n", "<C-S-j>", ":vertical resize -2<cr>", opts)
+
 
 -- Move around buffers
 -- C-. and C-, are not Ctrl-printable
@@ -54,11 +55,10 @@ keymap("v", ">", ">gv", opts)
 -- Keeps yanked word after paste
 keymap("v", "p", '"_dP', opts)
 
-
 -- VISUAL BLOCK MODE --
 -- Move text left and right
-keymap("x", "J", ":move '>+1<cr>gv-gv", opts)
-keymap("x", "K", ":move '<-2<cr>gv-gv", opts)
+-- keymap("x", "J", ":move '>+1<cr>gv-gv", opts)
+-- keymap("x", "K", ":move '<-2<cr>gv-gv", opts)
 
 
 -- TERMINAL --
@@ -73,7 +73,8 @@ vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 
 -- VARIOUS --
 -- Toggle completion
-keymap("n", "<space>cj", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("n", "<C-y>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("i", "<C-y>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
 
 -- Toggle spell check
 keymap("n", "<space>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)

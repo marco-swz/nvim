@@ -1,5 +1,5 @@
 vim.opt.mouse = "a"
-vim.opt.clipboard = "unnamedplus"
+--vim.opt.clipboard = "unnamedplus"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.shiftwidth = 4

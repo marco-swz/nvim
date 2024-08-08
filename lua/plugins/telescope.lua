@@ -8,15 +8,10 @@ return {
 		local keymap = vim.keymap.set
 
 		keymap('n', '<space>fy', builtin2.live_grep, {})
-		keymap('n', '<space>fu', builtin2.lsp_references, {})
-		keymap('n', '<space>fi', builtin2.lsp_implementations, {})
-		keymap('n', '<space>fo', builtin2.lsp_definitions, {})
-		keymap('n', '<space>fp', builtin2.lsp_type_definitions, {})
 
 		keymap('n', '<space>fh', builtin2.current_buffer_fuzzy_find, {})
 		keymap('n', '<space>fj', builtin2.find_files, {})
-		keymap('n', '<space>fk', builtin2.diagnostics, {})
-		keymap('n', '<space>fl', builtin2.git_files, {})
+		keymap('n', '<space>fk', builtin2.git_files, {})
 		keymap('n', '<space>fb', builtin2.commands, {})
 		keymap('n', '<space>f;', builtin2.commands, {})
 	  
