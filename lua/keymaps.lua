@@ -9,7 +9,8 @@ vim.g.maplocalleader = " "
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<space>a", ":Lexplore<cr>", opts)
+--keymap("n", "<space>a", ":Lexplore<cr>", opts)
+keymap("n", "<space>a", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 --keymap("n", "<space>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
 --keymap("x", "<space>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
@@ -34,8 +35,9 @@ keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
 -- Copy/paste using the system clipboard
-keymap("n", "<space>y", '"+y', opts)
-keymap("n", "<space>p", '"+p', opts)
+keymap("n", "<C-y>", '"+y', opts)
+keymap("n", "<C-p>", '"+p', opts)
+keymap("i", "<C-p>", '"+p', opts)
 
 -- Centering
 keymap("n", "n", "nzz", opts)
@@ -73,8 +75,8 @@ vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 
 -- VARIOUS --
 -- Toggle completion
-keymap("n", "<C-y>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
-keymap("i", "<C-y>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("n", "<C-n>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("i", "<C-n>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
 
 -- Toggle spell check
 keymap("n", "<space>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
@@ -89,3 +91,4 @@ keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 keymap("i", "<C-h>", "<C-w>", opts)
 keymap("i", "<C-BS>", "<C-w>", opts)
+

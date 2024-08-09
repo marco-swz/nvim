@@ -35,9 +35,6 @@ return {
 			vim.keymap.set('n', '<space>dh', vim.lsp.buf.code_action, bufopts)
 			vim.keymap.set('n', '<space>dy', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 
-			vim.keymap.set('n', 'gD', telescope.lsp_type_definitions, bufopts)
-			vim.keymap.set('n', 'gd', telescope.lsp_definitions, bufopts)
-
             -- Telescope LSP
             vim.keymap.set('n', '<space>fu', telescope.lsp_references, bufopts)
             vim.keymap.set('n', '<space>fi', telescope.lsp_implementations, bufopts)
