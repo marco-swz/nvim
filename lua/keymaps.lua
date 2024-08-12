@@ -36,8 +36,11 @@ keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
 -- Copy/paste using the system clipboard
 keymap("n", "<C-y>", '"+y', opts)
+keymap("i", "<C-y>", '"+y', opts)
+keymap("v", "<C-y>", '"+y', opts)
 keymap("n", "<C-p>", '"+p', opts)
-keymap("i", "<C-p>", '"+p', opts)
+keymap("i", "<C-p>", '<esc>"+pa', opts)
+keymap("v", "<C-p>", '"+p', opts)
 
 -- Centering
 keymap("n", "n", "nzz", opts)

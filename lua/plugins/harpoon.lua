@@ -12,9 +12,7 @@ return {
             }
         })
 
-        vim.keymap.set("n", "sj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
         vim.keymap.set("n", "<space>sj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-        vim.keymap.set("n", "ss", function() harpoon:list():add() end)
         vim.keymap.set("n", "<space>ss", function() harpoon:list():add() end)
 
 		vim.keymap.set("n", "<space>u", function() harpoon:list():select(1) end)
