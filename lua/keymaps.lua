@@ -9,8 +9,7 @@ vim.g.maplocalleader = " "
 
 keymap("", "<Space>", "<Nop>", opts)
 
---keymap("n", "<space>a", ":Lexplore<cr>", opts)
-keymap("n", "<space>a", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+keymap("n", "<space>,", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 --keymap("n", "<space>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
 --keymap("x", "<space>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
@@ -82,10 +81,10 @@ keymap("n", "<C-n>", "<cmd>lua require('custom_functions').toggle_completion()<C
 keymap("i", "<C-n>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
 
 -- Toggle spell check
-keymap("n", "<space>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
+-- keymap("n", "<space>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
 
 -- Toggle grammar check
-keymap("n", "<space>cl", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
+-- keymap("n", "<space>cl", "<cmd>lua require('custom_functions').toggle_grammar()<cr>", opts)
 
 -- Center after moving up and down
 keymap("n", "<C-u>", "<C-u>zz", opts)
@@ -95,3 +94,25 @@ keymap("n", "N", "Nzz", opts)
 keymap("i", "<C-h>", "<C-w>", opts)
 keymap("i", "<C-BS>", "<C-w>", opts)
 
+
+keymap("n", "<space>c", "gcc", opts)
+keymap("n", "R", "viwp", opts)
+keymap("n", "U", "<C-r>", opts)
+keymap("n", ">", ">>", opts)
+keymap("n", "<", "<<", opts)
+keymap("n", "%", "ggVG", opts)
+keymap("v", "%", "<esc>ggVG", opts)
+keymap("n", "ge", "G", opts)
+keymap("v", "ge", "G", opts)
+keymap("n", "gh", "0", opts)
+keymap("v", "gh", "0", opts)
+keymap("n", "gl", "$", opts)
+keymap("v", "gl", "$", opts)
+keymap("n", "gs", "^", opts)
+keymap("v", "gs", "^", opts)
+keymap("n", "gt", "H", opts)
+keymap("v", "gt", "H", opts)
+keymap("n", "gc", "M", opts)
+keymap("v", "gc", "M", opts)
+keymap("n", "gb", "L", opts)
+keymap("v", "gb", "L", opts)
