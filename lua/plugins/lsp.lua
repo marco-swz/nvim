@@ -27,9 +27,9 @@ return {
 			vim.keymap.set('n', '<C-j>', vim.lsp.buf.hover, bufopts)
 			vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
             vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+            vim.keymap.set('n', '<C-l>', vim.diagnostic.open_float, bufopts)
 
             -- Telescope LSP
-            vim.keymap.set('n', '<space>d', telescope.diagnostics, bufopts)
             vim.keymap.set('n', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			vim.keymap.set('v', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
             vim.keymap.set('n', 'gr', telescope.lsp_references, bufopts)
@@ -39,6 +39,7 @@ return {
             vim.keymap.set('n', '<space>s', telescope.lsp_document_symbols, bufopts)
             vim.keymap.set('n', '<space>S', telescope.lsp_workspace_symbols, bufopts)
             vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
+            vim.keymap.set('n', '<space>d', telescope.diagnostics, bufopts)
             --vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts)
 		end
 
