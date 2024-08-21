@@ -9,7 +9,7 @@ vim.g.maplocalleader = " "
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<space>,", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+keymap("n", "<space>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 --keymap("n", "<space>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
 --keymap("x", "<space>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
 
@@ -27,9 +27,6 @@ keymap("n", "<C-S-j>", ":vertical resize -2<cr>", opts)
 
 
 -- Move around buffers
--- C-. and C-, are not Ctrl-printable
-keymap("n", "<C-.>", ":bnext<cr>", opts)
-keymap("n", "<C-,>", ":bprevious<cr>", opts)
 keymap("n", "<S-l>", ":bnext<cr>", opts)
 keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
@@ -96,6 +93,7 @@ keymap("i", "<C-BS>", "<C-w>", opts)
 
 
 keymap("n", "<space>c", "gcc", opts)
+vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, opts)
 keymap("n", "R", "viwp", opts)
 keymap("n", "U", "<C-r>", opts)
 keymap("n", ">", ">>", opts)
@@ -116,3 +114,5 @@ keymap("n", "gc", "M", opts)
 keymap("v", "gc", "M", opts)
 keymap("n", "gb", "L", opts)
 keymap("v", "gb", "L", opts)
+keymap("n", "s", "/\\c", opts)
+keymap("n", "S", "?\\c", opts)

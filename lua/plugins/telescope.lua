@@ -16,8 +16,9 @@ return {
 		keymap('n', "<space>'", builtin2.resume, {})
 		keymap('n', "<space>-", builtin2.resume, {})
 		keymap('n', '<space>s', builtin2.current_buffer_fuzzy_find, {})
-		keymap('n', '<space>S', builtin2.live_grep, {})
-		keymap('n', '<space>a', builtin2.quickfix, {})
+		keymap('n', '<space>w', builtin2.current_buffer_fuzzy_find, {})
+		keymap('n', '<space>W', builtin2.live_grep, {})
+        keymap('n', '<space>S', builtin2.live_grep, {})
 
 		require('telescope').setup{
 			file_ignore_patterns = {
@@ -27,6 +28,7 @@ return {
 				'.history/',
                 'venv/',
                 'vendor/',
+                'node_modules/',
 				'%.zip',
 				'%.gz',
 				'%.png',

@@ -2,45 +2,37 @@ return {
 	"neovim/nvim-lspconfig",
 	
 	config = function()
-		-- Set up lsp installer
 		require("mason").setup()
 
-		-- Set up lspconfig.
 		local lsp = require("lspconfig")
-		--local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
         
         local telescope = require('telescope.builtin')
 
-		-- Mappings.
-		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 		local opts = { noremap = true, silent = true }
 
-		-- Use an on_attach function to only map the following keys
-		-- after the language server attaches to the current buffer
 		local on_attach = function(client, bufnr)
 			-- Enable completion triggered by <c-x><c-o>
 			vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-			-- Mappings.
-			-- See `:help vim.lsp.*` for documentation on any of the below functions
 			local bufopts = { noremap = true, silent = true, buffer = bufnr }
 			vim.keymap.set('n', '<C-j>', vim.lsp.buf.hover, bufopts)
 			vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
             vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, bufopts)
             vim.keymap.set('n', '<C-l>', vim.diagnostic.open_float, bufopts)
 
-            -- Telescope LSP
             vim.keymap.set('n', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			vim.keymap.set('v', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
+
             vim.keymap.set('n', 'gr', telescope.lsp_references, bufopts)
             vim.keymap.set('n', 'gi', telescope.lsp_implementations, bufopts)
             vim.keymap.set('n', 'gd', telescope.lsp_definitions, bufopts)
             vim.keymap.set('n', 'gy', telescope.lsp_type_definitions, bufopts)
+
             vim.keymap.set('n', '<space>s', telescope.lsp_document_symbols, bufopts)
             vim.keymap.set('n', '<space>S', telescope.lsp_workspace_symbols, bufopts)
             vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
-            vim.keymap.set('n', '<space>d', telescope.diagnostics, bufopts)
-            --vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, bufopts)
+            vim.keymap.set('n', '<space>d', function() telescope.diagnostics({ bufnr = 0 }) end, bufopts)
+            vim.keymap.set('n', '<space>D', telescope.diagnostics, bufopts)
 		end
 
 		local lsp_flags = {
