@@ -64,3 +64,18 @@ vim.api.nvim_create_autocmd('BufWritePost', {
         vim.api.nvim_command('RunSass')
     end
 })
+
+vim.api.nvim_create_user_command('RunRollup', function() 
+    if vim.fn.findfile('rollup.config.mjs') ~= "" then
+        local file_path = vim.fn.expand('%:p') 
+        run_term_command({ 'npx', 'rollup', '-c', '--silent', '-i', file_path })
+    end
+end, {})
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+    group = vim.api.nvim_create_augroup('AutoRunRollup', { clear = true }),
+    pattern = '*.js',
+    callback = function()
+        vim.api.nvim_command('RunRollup')
+    end
+})
