@@ -9,4 +9,6 @@ return {
     { 'j-hui/fidget.nvim', config = true, tag = 'legacy' },
     'nvim-lua/plenary.nvim',
 	'EdenEast/nightfox.nvim',
+    "rebelot/kanagawa.nvim",
+    "sainnhe/sonokai",
 }
