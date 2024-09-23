@@ -74,8 +74,25 @@ end, {})
 
 vim.api.nvim_create_autocmd('BufWritePost', {
     group = vim.api.nvim_create_augroup('AutoRunRollup', { clear = true }),
-    pattern = '*.js',
+    pattern = 'src/*.js',
     callback = function()
         vim.api.nvim_command('RunRollup')
+    end
+})
+
+vim.api.nvim_create_user_command('RunRollupWork', function() 
+    local current_dir = vim.fn.getcwd()
+    local file_path = vim.fn.expand('%:p') 
+
+    vim.api.nvim_command('cd js/lib/helium-js')
+    run_term_command({ 'npx', 'rollup', '-c', '--silent', '-i', file_path })
+    vim.api.nvim_command('cd '..current_dir)
+end, {})
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+    group = vim.api.nvim_create_augroup('AutoRunRollup', { clear = true }),
+    pattern = 'js/lib/helium-js/src/*.js',
+    callback = function()
+        vim.api.nvim_command('RunRollupWork')
     end
 })
