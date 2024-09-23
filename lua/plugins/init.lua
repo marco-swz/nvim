@@ -11,4 +11,5 @@ return {
 	'EdenEast/nightfox.nvim',
     "rebelot/kanagawa.nvim",
     "sainnhe/sonokai",
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 }
