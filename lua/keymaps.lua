@@ -116,3 +116,5 @@ keymap("n", "gb", "L", opts)
 keymap("v", "gb", "L", opts)
 keymap("n", "s", "/\\c", opts)
 keymap("n", "S", "?\\c", opts)
+
+keymap("n", "<esc>", ":noh<cr>", opts)

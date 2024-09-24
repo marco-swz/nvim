@@ -18,7 +18,6 @@ require("lazy").setup({
 })
 require('options')
 require('custom_functions')
-require('theme')
+-- require('theme')
 require('autorun')
-
 

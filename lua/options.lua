@@ -15,15 +15,16 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.showmode = false
 vim.opt.scrolloff = 8
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.updatetime = 500
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.cmd[[colorscheme nightfox]]
+vim.cmd[[colorscheme coal]]
 vim.cmd[[set spelllang=en,de]]
-vim.cmd[[set guifont=Consolas:h12]]
+vim.cmd[[set guifont=Consolas:h13]]
+vim.cmd[[:set guicursor=i:block]]
 vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 
