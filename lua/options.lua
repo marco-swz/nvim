@@ -21,7 +21,7 @@ vim.opt.cursorline = false
 vim.opt.updatetime = 500
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.cmd[[colorscheme coal]]
+vim.cmd[[colorscheme kanagawa]]
 vim.cmd[[set spelllang=en,de]]
 vim.cmd[[set guifont=Consolas:h13]]
 vim.cmd[[:set guicursor=i:block]]
