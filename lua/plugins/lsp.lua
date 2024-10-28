@@ -130,5 +130,10 @@ return {
                 cmd = { vim.env.ELIXIR_LS .. "/language_server.sh" };
             }
         end
+        lsp.nixd.setup {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+        }
 	end
 }
