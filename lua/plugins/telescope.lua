@@ -6,6 +6,7 @@ return {
 	config = function()
 		local builtin2 = require('telescope.builtin')
 		local keymap = vim.keymap.set
+        local actions = require("telescope.actions")
 
 		keymap('n', '<space>f', builtin2.find_files, {})
 		keymap('n', '<space>F', builtin2.git_files, {})
@@ -52,6 +53,14 @@ return {
                     },
                 },
                 sorting_strategy = "ascending",
+                mappings = {
+                    i = {
+                        ["<C-c>"] = { "<esc>", type = "command" },
+                    },
+                    n = {
+                        ["<C-c>"] = actions.close,
+                    },
+                }
             },
 		}
 	end
