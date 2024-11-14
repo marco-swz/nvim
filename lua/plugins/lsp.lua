@@ -127,10 +127,15 @@ return {
                 on_attach = on_attach,
                 flags = lsp_flags,
                 capabilities = capabilities,
-                cmd = { vim.env.ELIXIR_LS .. "/language_server.sh" };
+                cmd = { vim.env.ELIXIR_LS .. "/language_server.sh" }
             }
         end
         lsp.nixd.setup {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+        }
+        lsp.lemminx.setup {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
