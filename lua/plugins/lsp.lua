@@ -122,14 +122,12 @@ return {
 			capabilities = capabilities,
             filetypes = { "markdown", "tex", "bib", "pandoc" }
         }
-        if vim.env.ELIXIR_LS then
-            lsp.elixirls.setup {
-                on_attach = on_attach,
-                flags = lsp_flags,
-                capabilities = capabilities,
-                cmd = { vim.env.ELIXIR_LS .. "/language_server.sh" }
-            }
-        end
+        lsp.nextls.setup {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+            cmd = { "nextls", "--stdio" },
+        }
         lsp.nixd.setup {
 			on_attach = on_attach,
 			flags = lsp_flags,
