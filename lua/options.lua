@@ -1,5 +1,4 @@
 vim.opt.mouse = "a"
---vim.opt.clipboard = "unnamedplus"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.shiftwidth = 4
@@ -24,7 +23,7 @@ vim.opt.backup = false
 vim.cmd[[colorscheme kanagawa]]
 vim.cmd[[set spelllang=en,de]]
 vim.cmd[[set guifont=Consolas:h13]]
-vim.cmd[[:set guicursor=i:block]]
+--vim.cmd[[:set guicursor=i:block]]
 vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 

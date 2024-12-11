@@ -15,10 +15,10 @@ return {
 			vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 			local bufopts = { noremap = true, silent = true, buffer = bufnr }
-			vim.keymap.set('n', '<C-j>', vim.lsp.buf.hover, bufopts)
-			vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-            vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-            vim.keymap.set('n', '<C-l>', vim.diagnostic.open_float, bufopts)
+			vim.keymap.set('n', '<C-J>', vim.lsp.buf.hover, bufopts)
+			vim.keymap.set('n', '<C-K>', vim.lsp.buf.signature_help, bufopts)
+            vim.keymap.set('i', '<C-K>', vim.lsp.buf.signature_help, bufopts)
+            vim.keymap.set('n', '<C-L>', vim.diagnostic.open_float, bufopts)
 
             vim.keymap.set('n', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			vim.keymap.set('v', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)

@@ -9,9 +9,8 @@ vim.g.maplocalleader = " "
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<space>e", "<CMD>Oil<CR>", { desc = "Open parent directory" })
---keymap("n", "<space>g", "<cmd>lua require('custom_functions').send()<CR>", opts)
---keymap("x", "<space>g", "<cmd>lua require('custom_functions').send(true)<CR>", opts)
+keymap("n", "<space>e", "<CMD>Oil<CR>", opts)
+vim.keymap.set('n', '<space>t', function() require('dbee').toggle() end, opts)
 
 -- Move around windows
 keymap("n", "<space>h", "<C-w>h", opts)

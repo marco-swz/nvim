@@ -8,7 +8,6 @@ return {
     'saadparwaiz1/cmp_luasnip',
     { 'j-hui/fidget.nvim', config = true, tag = 'legacy' },
     'nvim-lua/plenary.nvim',
-	'EdenEast/nightfox.nvim',
     {
         "rebelot/kanagawa.nvim",
         config = function() 
@@ -47,17 +46,4 @@ return {
             })
         end
     },
-    "sainnhe/sonokai",
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    {
-        'cranberry-clockworks/coal.nvim',
-        config = function()
-            require('coal').setup({
-                colors = {
-                    smoky_black = '#000000'
-                }
-            })
-        end
-    },
-    { 'dasupradyumna/midnight.nvim', lazy = false, priority = 1000 },
 }
