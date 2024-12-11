@@ -8,9 +8,21 @@ return {
     end,
     config = function()
         local server = os.getenv("ORACLE_BRUCK_TEST_SERVER")
+        if server == nil then
+            return
+        end
         local db = os.getenv("ORACLE_BRUCK_TEST_DB")
+        if db == nil then
+            return
+        end
         local usr = os.getenv("ORACLE_BRUCK_TEST_USR")
+        if usr == nil then
+            return
+        end
         local pwd = os.getenv("ORACLE_BRUCK_TEST_PWD")
+        if pwd == nil then
+            return
+        end
 
         require("dbee").setup {
             sources = {
