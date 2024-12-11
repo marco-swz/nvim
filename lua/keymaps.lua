@@ -73,8 +73,8 @@ vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 
 -- VARIOUS --
 -- Toggle completion
-keymap("n", "<C-n>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
-keymap("i", "<C-n>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("n", "<C-m>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
+keymap("i", "<C-m>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
 
 -- Toggle spell check
 -- keymap("n", "<space>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)

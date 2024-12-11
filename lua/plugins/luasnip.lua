@@ -4,9 +4,9 @@ return {
 	config = function()
 		local ls = require("luasnip")
 
-		vim.keymap.set({"i"}, "<C-h>", function() ls.expand() end, {silent = true})
-		vim.keymap.set({"i", "s"}, "<C-m>", function() ls.jump( 1) end, {silent = true})
-		vim.keymap.set({"i", "s"}, "<C-M>", function() ls.jump(-1) end, {silent = true})
+		vim.keymap.set({"i"}, "<C-b>", function() ls.expand() end, {silent = true})
+		vim.keymap.set({"i", "s"}, "<C-b>", function() ls.jump( 1) end, {silent = true})
+		vim.keymap.set({"i", "s"}, "<C-h>", function() ls.jump(-1) end, {silent = true})
 
 		vim.keymap.set({"i", "s"}, "<C-E>", function()
 			if ls.choice_active() then
