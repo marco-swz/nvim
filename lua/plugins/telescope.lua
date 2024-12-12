@@ -61,7 +61,7 @@ return {
             },
 		}
 
-        --require("telescope").load_extension("fzf")
+        require("telescope").load_extension("fzf")
 
 		local builtin2 = require('telescope.builtin')
 		local keymap = vim.keymap.set
