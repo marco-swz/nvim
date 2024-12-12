@@ -27,5 +27,5 @@ vim.cmd[[set guifont=Consolas:h13]]
 vim.g.languagetool_server_jar = "/usr/share/java/languagetool/languagetool-server.jar"
 --vim.api.nvim_create_autocmd("TermOpen", {command=[[setlocal nonumber norelativenumber]]})
 
-vim.g.cmp_toggle = false
+vim.g.cmp_toggle = true;
 

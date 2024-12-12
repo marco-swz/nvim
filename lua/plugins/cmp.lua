@@ -15,14 +15,14 @@ return {
 			mapping = cmp.mapping.preset.insert({
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-u>'] = cmp.mapping.scroll_docs(4),
-                ['<C-l>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                ['<C-l>'] = cmp.mapping(cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), { 'i', 'c' }),
                 ["<C-m>"] = cmp.config.disable,
-                ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior }),
-                ['<C-j>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior }),
+                ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior }), { 'i', 'c' }),
+                ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior }), { 'i', 'c' }),
 			}),
 			sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
-                { name = 'luasnip' }, -- For luasnip users.
+                { name = 'luasnip' }, 
 			}, {
                 { name = 'buffer' },
 			})
@@ -38,7 +38,8 @@ return {
 		})
 
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-		cmp.setup.cmdline({ '/', '?' }, { mapping = cmp.mapping.preset.cmdline(),
+		cmp.setup.cmdline({ '/', '?' }, { 
+			mapping = cmp.mapping.preset.cmdline(),
 			sources = {
 			  { name = 'buffer' }
 			}
