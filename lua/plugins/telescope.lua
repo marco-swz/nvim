@@ -45,17 +45,17 @@ return {
                 mappings = {
                     i = {
                         ["<C-c>"] = { "<esc>", type = "command" },
-                        ["<C-j>"] = actions.move_selection_next,
-                        ["<C-k>"] = actions.move_selection_previous,
                         ["<C-l>"] = actions.select_default,
                         ["<C-h>"] = actions.close,
+                        ["<C-n>"] = actions.move_selection_next,
+                        ["<C-p>"] = actions.move_selection_previous,
                     },
                     n = {
                         ["<C-c>"] = actions.close,
-                        ["<C-j>"] = actions.move_selection_next,
-                        ["<C-k>"] = actions.move_selection_previous,
                         ["<C-l>"] = actions.select_default,
                         ["<C-h>"] = actions.close,
+                        ["<C-n>"] = actions.move_selection_next,
+                        ["<C-p>"] = actions.move_selection_previous,
                     },
                 }
             },

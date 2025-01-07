@@ -43,10 +43,6 @@ keymap("v", "<C-p>", '"+p', opts)
 keymap("n", "<C-o>", "<C-o>zz", opts)
 keymap("n", "<C-i>", "<C-i>zz", opts)
 
--- Jump up/down
-keymap("n", "J", "<C-d>zz", opts)
-keymap("n", "K", "<C-u>zz", opts)
-
 -- VISUAL MODE --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -72,10 +68,6 @@ vim.cmd([[:tnoremap <C-w>l <C-\><C-n><C-w>l]])
 
 
 -- VARIOUS --
--- Toggle completion
-keymap("n", "<C-m>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
-keymap("i", "<C-m>", "<cmd>lua require('custom_functions').toggle_completion()<CR>", opts)
-
 -- Toggle spell check
 -- keymap("n", "<space>ck", "<cmd>lua require('custom_functions').toggle_spell()<cr>", opts)
 
@@ -113,9 +105,9 @@ keymap("n", "gc", "M", opts)
 keymap("v", "gc", "M", opts)
 keymap("n", "gb", "L", opts)
 keymap("v", "gb", "L", opts)
+keymap("n", "ga", "<C-6>", opts)
 keymap("n", "s", "/\\c", opts)
 keymap("n", "S", "?\\c", opts)
 
 keymap("n", "<esc>", ":noh<cr>", opts)
 
-keymap("n", "<space>;", "<C-6>", opts)
