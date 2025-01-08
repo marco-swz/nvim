@@ -15,9 +15,9 @@ return {
 			mapping = cmp.mapping.preset.insert({
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-u>'] = cmp.mapping.scroll_docs(4),
-                ['<C-l>'] = cmp.mapping(cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), { 'i', 'c' }),
-                ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior }), { 'i', 'c' }),
-                ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior }), { 'i', 'c' }),
+                --['<CR>'] = cmp.mapping(cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), { 'i', 'c' }),
+                ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }), { 'i', 'c' }),
+                ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }), { 'i', 'c' }),
 			}),
 			sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
@@ -54,11 +54,5 @@ return {
 			})
 		})
 
-		-- Toggle auto completion
-		cmp.setup {
-		  enabled = function()
-			return vim.g.cmp_toggle
-		  end
-		}
 	end
 }

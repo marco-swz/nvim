@@ -44,16 +44,13 @@ return {
                 sorting_strategy = "ascending",
                 mappings = {
                     i = {
-                        ["<C-c>"] = { "<esc>", type = "command" },
-                        ["<C-l>"] = actions.select_default,
-                        ["<C-h>"] = actions.close,
+                        ["<C-c>"] = actions.close,
+                        ["<esc>"] = actions.close,
                         ["<C-n>"] = actions.move_selection_next,
                         ["<C-p>"] = actions.move_selection_previous,
                     },
                     n = {
                         ["<C-c>"] = actions.close,
-                        ["<C-l>"] = actions.select_default,
-                        ["<C-h>"] = actions.close,
                         ["<C-n>"] = actions.move_selection_next,
                         ["<C-p>"] = actions.move_selection_previous,
                     },
@@ -75,8 +72,8 @@ return {
 		keymap('n', "<space>'", builtin2.resume, {})
 		keymap('n', "<space>-", builtin2.resume, {})
 		keymap('n', '<space>s', builtin2.current_buffer_fuzzy_find, {})
-		keymap('n', '<space>w', builtin2.current_buffer_fuzzy_find, {})
-		keymap('n', '<space>W', builtin2.live_grep, {})
+		keymap('n', '<space>e', builtin2.current_buffer_fuzzy_find, {})
+		keymap('n', '<space>E', builtin2.live_grep, {})
         keymap('n', '<space>S', builtin2.live_grep, {})
 
 	end

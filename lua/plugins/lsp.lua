@@ -33,6 +33,9 @@ return {
             vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
             vim.keymap.set('n', '<space>d', function() telescope.diagnostics({ bufnr = 0 }) end, bufopts)
             vim.keymap.set('n', '<space>D', telescope.diagnostics, bufopts)
+
+            require("lsp_signature").on_attach({
+            }, bufnr)
 		end
 
 		local lsp_flags = {

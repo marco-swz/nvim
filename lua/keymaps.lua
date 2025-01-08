@@ -9,25 +9,20 @@ vim.g.maplocalleader = " "
 
 keymap("", "<Space>", "<Nop>", opts)
 
-keymap("n", "<space>e", "<CMD>Oil<CR>", opts)
+keymap("n", "<space>z", "<CMD>Oil<CR>", opts)
 vim.keymap.set('n', '<space>t', function() require('dbee').toggle() end, opts)
 
 -- Move around windows
-keymap("n", "<space>h", "<C-w>h", opts)
-keymap("n", "<space>j", "<C-w>j", opts)
-keymap("n", "<space>k", "<C-w>k", opts)
-keymap("n", "<space>l", "<C-w>l", opts)
+keymap("n", "<space>wh", "<C-w>h", opts)
+keymap("n", "<space>wj", "<C-w>j", opts)
+keymap("n", "<space>wk", "<C-w>k", opts)
+keymap("n", "<space>wl", "<C-w>l", opts)
 
 -- Resize windows
 keymap("n", "<C-S-k>", ":res +2<cr>", opts)
 keymap("n", "<C-S-j>", ":res -2<cr>", opts)
 keymap("n", "<C-S-h>", ":vertical resize +2<cr>", opts)
 keymap("n", "<C-S-j>", ":vertical resize -2<cr>", opts)
-
-
--- Move around buffers
-keymap("n", "<S-l>", ":bnext<cr>", opts)
-keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
 -- Copy/paste using the system clipboard
 keymap("n", "<C-y>", '"+y', opts)
