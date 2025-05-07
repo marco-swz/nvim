@@ -6,7 +6,7 @@ return {
 
 		local lsp = require("lspconfig")
         
-        local telescope = require('telescope.builtin')
+        local fzf = require("fzf-lua")
 
 		local opts = { noremap = true, silent = true }
 
@@ -15,24 +15,24 @@ return {
 			vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 			local bufopts = { noremap = true, silent = true, buffer = bufnr }
-			vim.keymap.set('n', '<C-J>', vim.lsp.buf.hover, bufopts)
-			vim.keymap.set('n', '<C-K>', vim.lsp.buf.signature_help, bufopts)
-            vim.keymap.set('i', '<C-K>', vim.lsp.buf.signature_help, bufopts)
-            vim.keymap.set('n', '<C-L>', vim.diagnostic.open_float, bufopts)
+			vim.keymap.set('n', '<space>k', vim.lsp.buf.hover, bufopts)
+			vim.keymap.set('n', '<C-m>', vim.lsp.buf.signature_help, bufopts)
+            vim.keymap.set('i', '<C-m>', vim.lsp.buf.signature_help, bufopts)
+            vim.keymap.set('n', '<C-b>', vim.diagnostic.open_float, bufopts)
 
             vim.keymap.set('n', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			vim.keymap.set('v', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 
-            vim.keymap.set('n', 'gr', telescope.lsp_references, bufopts)
-            vim.keymap.set('n', 'gi', telescope.lsp_implementations, bufopts)
-            vim.keymap.set('n', 'gd', telescope.lsp_definitions, bufopts)
-            vim.keymap.set('n', 'gy', telescope.lsp_type_definitions, bufopts)
+            vim.keymap.set('n', 'gr', fzf.lsp_references, bufopts)
+            vim.keymap.set('n', 'gi', fzf.lsp_implementations, bufopts)
+            vim.keymap.set('n', 'gd', fzf.lsp_definitions, bufopts)
+            vim.keymap.set('n', 'gy', fzf.lsp_typedefs, bufopts)
 
-            vim.keymap.set('n', '<space>s', telescope.lsp_document_symbols, bufopts)
-            vim.keymap.set('n', '<space>S', telescope.lsp_workspace_symbols, bufopts)
+            vim.keymap.set('n', '<space>s', fzf.lsp_document_symbols, bufopts)
+            vim.keymap.set('n', '<space>S', fzf.lsp_workspace_symbols, bufopts)
             vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
-            vim.keymap.set('n', '<space>d', function() telescope.diagnostics({ bufnr = 0 }) end, bufopts)
-            vim.keymap.set('n', '<space>D', telescope.diagnostics, bufopts)
+            vim.keymap.set('n', '<space>d', fzf.diagnostics_document, bufopts)
+            vim.keymap.set('n', '<space>D', fzf.diagnostics_workspace, bufopts)
 
             require("lsp_signature").on_attach({
             }, bufnr)
