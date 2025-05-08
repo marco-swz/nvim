@@ -5,15 +5,42 @@ return {
     config = function() 
         local fzf = require("fzf-lua")
         fzf.setup{
-          -- winopts = { ...  },     -- UI Options
-          -- keymap = { ...  },      -- Neovim keymaps / fzf binds
-          -- actions = { ...  },     -- Fzf "accept" binds
-          -- fzf_opts = { ...  },    -- Fzf CLI flags
-          -- fzf_colors = { ...  },  -- Fzf `--color` specification
-          -- hls = { ...  },         -- Highlights
-          -- previewers = { ...  },  -- Previewers options
-          -- SPECIFIC COMMAND/PICKER OPTIONS, SEE BELOW
-          -- files = { ... },
+            -- file_ignore_patterns = { "%.lua$", "%.vim$" }
+            files = {
+                file_icons = false,
+                git_icons = false,
+            },
+            grep = {
+                file_icons = false,
+                git_icons = false,
+            },
+            buffers = {
+                file_icons = false,
+            },
+            git = {
+                files = {
+                    file_icons = false,
+                    git_icons = false,
+                },
+            },
+            lsp = {
+                file_icons = false,
+                git_icons = false,
+                symbols = {
+                    symbol_style = 3,
+                },
+                finder = {
+                    file_icons = false,
+                },
+            },
+            diagnostics = {
+                file_icons = false,
+                git_icons = false,
+                diag_icons = false,
+            },
+            complete_file = {
+                file_icons = false,
+            },
         }
 		local keymap = vim.keymap.set
 		keymap('n', '<space>f', fzf.files, {})
@@ -23,8 +50,8 @@ return {
 		keymap('n', '<space>/', fzf.live_grep, {})
 		keymap('n', "<space>'", fzf.resume, {})
 		keymap('n', "<space>-", fzf.resume, {})
-		keymap('n', '<space>s', fzf.grep_curbuf, {})
-		keymap('n', '<space>e', fzf.grep_curbuf, {})
+		keymap('n', '<space>s', fzf.lgrep_curbuf, {})
+		keymap('n', '<space>e', fzf.lgrep_curbuf, {})
 		keymap('n', '<space>E', fzf.live_grep, {})
 		keymap('n', '<space>S', fzf.live_grep, {})
     end
