@@ -16,9 +16,9 @@ return {
 
 			local bufopts = { noremap = true, silent = true, buffer = bufnr }
 			vim.keymap.set('n', '<space>k', vim.lsp.buf.hover, bufopts)
-			vim.keymap.set('n', '<C-m>', vim.lsp.buf.signature_help, bufopts)
-            vim.keymap.set('i', '<C-m>', vim.lsp.buf.signature_help, bufopts)
-            vim.keymap.set('n', '<C-b>', vim.diagnostic.open_float, bufopts)
+			-- vim.keymap.set('n', '<C-m>', vim.lsp.buf.signature_help, bufopts)
+            -- vim.keymap.set('i', '<C-m>', vim.lsp.buf.signature_help, bufopts)
+            vim.keymap.set('n', '<space>K', vim.diagnostic.open_float, bufopts)
 
             vim.keymap.set('n', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
 			vim.keymap.set('v', '=', function() vim.lsp.buf.format({ async = true }) end, bufopts)
@@ -33,13 +33,11 @@ return {
             vim.keymap.set('n', '<space>r', vim.lsp.buf.rename, bufopts)
             vim.keymap.set('n', '<space>d', fzf.diagnostics_document, bufopts)
             vim.keymap.set('n', '<space>D', fzf.diagnostics_workspace, bufopts)
+            vim.keymap.set('n', '<space>a', fzf.lsp_code_actions, bufopts)
 
-            require("lsp_signature").on_attach({
-            }, bufnr)
 		end
 
 		local lsp_flags = {
-			-- This is the default in Nvim 0.7+
 			debounce_text_changes = 150,
 		}
 
