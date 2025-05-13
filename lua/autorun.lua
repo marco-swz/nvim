@@ -1,6 +1,5 @@
 err_buf = nil
 local function print_to_err_buf(data)
-    print(vim.inspect(err_buf))
     if err_buf == nil or vim.fn.bufexists(err_buf) ~= 1 or vim.fn.bufname(err_buf) ~= 'AutoRun Error' then
         err_buf = vim.api.nvim_create_buf(true, true)
         vim.api.nvim_buf_set_name(err_buf, 'AutoRun Error')
