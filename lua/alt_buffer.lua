@@ -8,14 +8,23 @@ local function push_buffer()
 end
 
 local function pop_buffer()
-    for i=1, #buffer_list do
-        local buf = buffer_list[#buffer_list + 1 - i]
-        local cur_buf = vim.api.nvim_get_current_buf()
-        if buf ~= nil and vim.api.nvim_buf_is_valid(buf) and cur_buf ~= buf then
-            break
+    local cur_buf = vim.api.nvim_get_current_buf()
+    local len = #buffer_list
+    local next_valid = nil
+    local is_sequence = false
+    for i=1, len do
+        local idx = len + 1 - i
+        local buf = buffer_list[idx]
+        if not vim.api.nvim_buf_is_valid(buf) or cur_buf == buf then
+            table.remove(buffer_list, idx)
+        elseif next_valid == nil then
+            next_valid = buf
+            is_sequence = true
+        elseif next_valid == buf and is_sequence then
+            table.remove(buffer_list, idx)
+        elseif is_sequence and next_valid ~= buf then
+            is_sequence = false
         end
-
-        table.remove(buffer_list)
     end
 end
 
