@@ -19,8 +19,8 @@
         "body": [
             "/**",
             " * $0",
-            " * @param ${2:type} ${3:name}",
-            " * @returns ${1:void}",
+            " * @param {${2}} ${3}",
+            " * @returns {${1:void}}",
             " */"
         ],
         "description": "JSDoc function"

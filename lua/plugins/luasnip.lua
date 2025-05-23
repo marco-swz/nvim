@@ -4,13 +4,22 @@ return {
 	config = function()
 		local ls = require("luasnip")
 
-		vim.keymap.set({"i"}, "<C-l>", function() ls.expand() end, {silent = true})
-		vim.keymap.set({"i", "s"}, "<C-;>", function() ls.jump( 1) end, {silent = true})
-		vim.keymap.set({"i", "s"}, "<C-h>", function() ls.jump(-1) end, {silent = true})
+        vim.keymap.set({"i", "s"}, "<right>", function()
+            if ls.expand_or_jumpable() then
+                ls.expand_or_jump()
+            end
+        end,  
+        {silent = true})
+		vim.keymap.set({"i", "s"}, "<left>", function() ls.jump(-1) end, {silent = true})
 
-		vim.keymap.set({"i", "s"}, "<C-E>", function()
+		vim.keymap.set({"i", "s"}, "<C-n>", function()
 			if ls.choice_active() then
 				ls.change_choice(1)
+			end
+		end, {silent = true}) 
+		vim.keymap.set({"i", "s"}, "<C-p>", function()
+			if ls.choice_active() then
+				ls.change_choice(-1)
 			end
 		end, {silent = true}) 
 
