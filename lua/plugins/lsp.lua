@@ -4,8 +4,6 @@ return {
 	config = function()
 		require("mason").setup()
 
-		local lsp = require("lspconfig")
-        
         local fzf = require("fzf-lua")
 
 		local opts = { noremap = true, silent = true }
@@ -44,31 +42,31 @@ return {
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-		lsp.pyright.setup {
+		vim.lsp.config('pyright', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.julials.setup {
+		})
+		vim.lsp.config('julials', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.texlab.setup {
+		})
+		vim.lsp.config('texlab', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.gopls.setup {
+		})
+		vim.lsp.config('gopls', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.rust_analyzer.setup {
+		})
+		vim.lsp.config('rust_analyzer', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
+		})
 		--lsp.intelephense.setup {
 		--	on_attach = on_attach,
 		--	flags = lsp_flags,
@@ -84,65 +82,86 @@ return {
         --        },
         --    },
 		--}
-		lsp.phpactor.setup {
+		vim.lsp.config('phpactor', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
-		}
-		lsp.clangd.setup {
+		})
+		vim.lsp.config('clangd', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.ts_ls.setup {
+		})
+		vim.lsp.config('ts_ls', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
 			filetypes = { "javascript", "typescript", "html", "php" }
-		}
-		lsp.html.setup {
+		})
+		vim.lsp.config('html', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
 			filetypes = { "html", "php" }
-		}
-		lsp.zls.setup {
+		})
+		vim.lsp.config('zls', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.cssls.setup {
+		})
+		vim.lsp.config('cssls', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
-		}
-		lsp.htmx.setup {
-			on_attach = on_attach,
-			flags = lsp_flags,
-			capabilities = capabilities,
-			filetypes = { "html", "php" }
-		}
-        lsp.ltex.setup {
+		})
+        vim.lsp.config('ltex', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
             filetypes = { "markdown", "tex", "bib", "pandoc" }
-        }
-        lsp.nextls.setup {
+        })
+        vim.lsp.config('nextls', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
             cmd = { "nextls", "--stdio" },
-        }
-        lsp.nixd.setup {
+        })
+        vim.lsp.config('nixd', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
-        }
-        lsp.lemminx.setup {
+        })
+        vim.lsp.config('lemminx', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
-        }
+        })
+        vim.lsp.config("tinymist", {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+            cmd = { "tinymist" },
+            filetypes = { "typst" },
+        })
+
+
+        vim.lsp.enable({
+            'pyright',
+            'julials',
+            'texlab',
+            'rust_analyzer',
+            'ltex',
+            'html',
+            'ts_ls',
+            'gopls',
+            'zls',
+            'clangd',
+            'phpactor',
+            'nextls',
+            'nixd',
+            'cssls',
+            'lemminx',
+            'tinymist',
+        })
 	end
 }
