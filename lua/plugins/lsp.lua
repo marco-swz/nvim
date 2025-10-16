@@ -143,6 +143,43 @@ return {
             cmd = { "tinymist" },
             filetypes = { "typst" },
         })
+		vim.lsp.config('harper_ls', {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+            filetypes = { "typst", "markdown", "text", "bib" },
+            settings = {
+                ["harper-ls"] = {
+                    userDictPath = "",
+                    workspaceDictPath = "",
+                    fileDictPath = "",
+                    linters = {
+                        SpellCheck = true,
+                        SpelledNumbers = false,
+                        AnA = true,
+                        SentenceCapitalization = true,
+                        UnclosedQuotes = true,
+                        WrongQuotes = false,
+                        LongSentences = true,
+                        RepeatedWords = true,
+                        Spaces = true,
+                        Matcher = true,
+                        CorrectNumberSuffix = true
+                    },
+                    codeActions = {
+                        ForceStable = false
+                    },
+                    markdown = {
+                        IgnoreLinkTitle = false
+                    },
+                    diagnosticSeverity = "hint",
+                    isolateEnglish = false,
+                    dialect = "American",
+                    maxFileLength = 120000,
+                    ignoredLintsPath = {}
+                }
+            }
+		})
 
 
         vim.lsp.enable({
@@ -162,6 +199,7 @@ return {
             'cssls',
             'lemminx',
             'tinymist',
+            'harper_ls',
         })
 	end
 }
