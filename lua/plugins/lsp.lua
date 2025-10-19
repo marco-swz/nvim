@@ -131,6 +131,11 @@ return {
 			flags = lsp_flags,
 			capabilities = capabilities,
         })
+        vim.lsp.config('ansiblels', {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities,
+        })
         vim.lsp.config('lemminx', {
 			on_attach = on_attach,
 			flags = lsp_flags,
@@ -200,6 +205,7 @@ return {
             'lemminx',
             'tinymist',
             'harper_ls',
+            'ansiblels',
         })
 	end
 }
