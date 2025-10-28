@@ -1,6 +1,5 @@
 return { 
 	"williamboman/mason.nvim",
-    'rhysd/vim-grammarous',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
