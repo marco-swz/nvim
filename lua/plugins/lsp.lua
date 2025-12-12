@@ -67,26 +67,33 @@ return {
 			flags = lsp_flags,
 			capabilities = capabilities
 		})
-		--lsp.intelephense.setup {
-		--	on_attach = on_attach,
-		--	flags = lsp_flags,
-		--	capabilities = capabilities,
-        --    settings = {
-        --        intelephense = {
-        --            environment = {
-        --                phpVersion = "8.3.0",
-        --            },
-        --            format = {
-        --                braces = "k&r",
-        --            },
-        --        },
-        --    },
-		--}
-		vim.lsp.config('phpactor', {
+		vim.lsp.config('intelephense', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
+            settings = {
+                intelephense = {
+                    environment = {
+                        phpVersion = "8.3.0",
+                    },
+                    format = {
+                        braces = "k&r",
+                    },
+                    telemetry = {
+                        enabled = false,
+                    },
+                    diagnostics = {
+                        relaxedTypeCheck = false,
+                        noMixedTypeCheck = false,
+                    },
+                },
+            },
 		})
+		--vim.lsp.config('phpactor', {
+		--	on_attach = on_attach,
+		--	flags = lsp_flags,
+		--	capabilities = capabilities,
+		--})
 		vim.lsp.config('clangd', {
 			on_attach = on_attach,
 			flags = lsp_flags,
@@ -198,7 +205,8 @@ return {
             'gopls',
             'zls',
             'clangd',
-            'phpactor',
+            'intelephense',
+            -- 'phpactor',
             'nextls',
             'nixd',
             'cssls',
