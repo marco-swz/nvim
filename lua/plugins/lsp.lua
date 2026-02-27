@@ -84,6 +84,7 @@ return {
                     },
                     diagnostics = {
                         relaxedTypeCheck = false,
+                        undefinedConstants = false,
                         noMixedTypeCheck = false,
                     },
                 },
