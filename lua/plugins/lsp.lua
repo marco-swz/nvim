@@ -104,13 +104,13 @@ return {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
-			filetypes = { "javascript", "typescript", "html", "php" }
+			filetypes = { "javascript", "typescript", "html", "php", "typescriptreact" }
 		})
 		vim.lsp.config('html', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
-			filetypes = { "html", "php" }
+			filetypes = { "html", "php", "typescriptreact"}
 		})
 		vim.lsp.config('zls', {
 			on_attach = on_attach,
