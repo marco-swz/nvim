@@ -39,8 +39,7 @@ return {
 			debounce_text_changes = 150,
 		}
 
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 		vim.lsp.config('pyright', {
 			on_attach = on_attach,
@@ -105,17 +104,12 @@ return {
                 },
             },
 		})
-		--vim.lsp.config('phpactor', {
-		--	on_attach = on_attach,
-		--	flags = lsp_flags,
-		--	capabilities = capabilities,
-		--})
 		vim.lsp.config('clangd', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities
 		})
-		vim.lsp.config('ts_ls', {
+		vim.lsp.config('vtsls', {
 			on_attach = on_attach,
 			flags = lsp_flags,
 			capabilities = capabilities,
@@ -217,12 +211,11 @@ return {
             'rust_analyzer',
             'ltex',
             'html',
-            'ts_ls',
+            'vtsls',
             'gopls',
             'zls',
             'clangd',
             'intelephense',
-            -- 'phpactor',
             'nextls',
             'nixd',
             'cssls',
