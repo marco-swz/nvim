@@ -24,4 +24,4 @@ require('custom_functions')
 require('autorun')
 
 -- fix for TS errors on windows
-require 'nvim-treesitter.install'.compilers = { "clang" }
+-- require 'nvim-treesitter.install'.compilers = { "clang" }
