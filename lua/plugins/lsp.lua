@@ -130,6 +130,11 @@ return {
 			flags = lsp_flags,
 			capabilities = capabilities
 		})
+		vim.lsp.config('elixirls', {
+			on_attach = on_attach,
+			flags = lsp_flags,
+			capabilities = capabilities
+		})
         vim.lsp.config('ltex', {
 			on_attach = on_attach,
 			flags = lsp_flags,
@@ -221,6 +226,7 @@ return {
             'tinymist',
             'harper_ls',
             'ansiblels',
+            'elixirls',
         })
 	end
 }
